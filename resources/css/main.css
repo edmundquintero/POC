@@ -175,13 +175,73 @@ form[name=rateofReturnDateRange]{
   margin: 0;
   width: 100%;
 }
+#profileForm .radio-group label {
+  position: relative;
+  text-align: center;
+  width: 60px;
+}
 #profileForm .inputWrapper{
   width: 100%;
 }
 #profileForm input{
   width: 100%;
+  margin: 5px auto;
 }
-
+.radiolabel{
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 5px 0 0 0;
+  white-space: nowrap;
+  overflow: visible;
+}
+.radiolabel.long{
+  margin-left: -50px;
+}
+/*input[type=radio]{
+  background-color: blue;
+}*/
+.face-on, .face-off{
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  border: 1px solid #CCC;
+  color: #FFF;
+  text-align: center;
+  background: #F5F5F5;
+  margin-bottom: 10px;
+}
+ 
+.face-off:after{
+  content: ""; /*if CSS is disabled span elements are not displayed*/
+}
+input[type=radio]{
+  position: absolute;
+  right: 0;
+  margin: 0;
+  width: 31px;
+  height: 31px;
+  /*hide the radio button*/
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type="radio"] + .face-on{ /*the span element that immediately follow the radio button */
+  visibility: hidden; /*temporarily hide the "YES" label*/
+  background: blue;
+}
+input[type="radio"] + .face-on:after{
+  content: "X";
+}
+input[type="radio"]:checked + .face-on{
+  visibility: visible; /*show the "YES" label only if the radio button is checked*/
+}
 
 /*Datepicker overwrites*/
 .datepicker, .datepicker td{
@@ -215,7 +275,7 @@ form[name=rateofReturnDateRange]{
   transform: rotate(45deg);
 }
 .collapsable-content{
-  padding: 15px 50px;
+  padding: 15px 50px 50px 50px;
   display: none;
 }
 .collapsable-content .row{
