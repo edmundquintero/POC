@@ -66,6 +66,10 @@ select {
 select.mini{
   min-width: 75px;
 }
+.disabled{
+  pointer-events: none;
+  color: #919191;
+}
 #local{
   float: right;
   margin-top: -45px;

@@ -58,14 +58,13 @@
       </div>
       <hr />
       <div class='row collapsable-content' id='personalInfo'>
-
         <div class='col-xs-12'> <!-- Form control 1 -->
           <div class='row'>
             <div class='col-sm-2'>
               <label class='select-label'>
                 <select class='mini'>
-                    <option value='totalReturn'>Mr.</option>
-                    <option value='option2'>Ms.</option>
+                    <option value='mr'>Mr.</option>
+                    <option value='ms'>Ms.</option>
                 </select>
               </label>
               <div class='inputWrapper'>
@@ -73,22 +72,18 @@
               </div>
             </div>
             <div class='col-sm-3'>
-              <label></label>
               <div class='inputWrapper'>
-                <input type='text' name=''>
+                <input type='text' name='' value="Can't touch this" class='disabled'>
                 <span class='required'>First Name</span>
               </div>
             </div>
              <div class='col-sm-3'>
-              <label></label>
               <div class='inputWrapper'>
                 <input type='text' name=''>
                 <span class='required'>Middle</span>
               </div>
             </div>
-
             <div class='col-sm-3'>
-              <label></label>
               <div class='inputWrapper'>
                 <input type='text' name=''>
                 <span class='required'>Last Name</span>
@@ -102,9 +97,9 @@
             <div class='col-sm-5'>
               <label class='select-label'>
                 <select class='mini'>
-                    <option value='totalReturn'>Married</option>
-                    <option value='option2'>Divorced</option>
-                    <option value='option2'>Seeing a 'Slam Piece' on the side</option>
+                    <option value='married'>Married</option>
+                    <option value='divorced'>Divorced</option>
+                    <option value='slamPiece'>Seeing a 'Slam Piece' on the side</option>
                 </select>
               </label>
               <div class='inputWrapper'>
@@ -112,7 +107,6 @@
               </div>
             </div>
             <div class='col-sm-3'>
-              <label></label>
               <div class='inputWrapper'>
                 <input type='text' name=''>
                 <span class='required'>Gender</span>
@@ -121,6 +115,109 @@
           </div>
         </div> <!-- end form control 2 -->
 
+        <div class='col-xs-12'> <!-- Form control 3 -->
+          <div class='row'>
+            <div class='col-sm-5'>
+              <div class='inputWrapper'>
+                <input type='text' name=''>
+                <span class='required'>Street Address 1</span>
+              </div>
+            </div>
+            <div class='col-sm-5'>
+              <div class='inputWrapper'>
+                <input type='text' name=''>
+                <span>Street Address 2</span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 3 -->
+
+        <div class='col-xs-12'> <!-- Form control 4 -->
+          <div class='row'>
+            <div class='col-sm-5'>
+              <div class='inputWrapper'>
+                <input type='text' name=''>
+                <span class='required'>City</span>
+              </div>
+            </div>
+            <div class='col-sm-2'>
+               <label class='select-label'>
+                <select class='mini'>
+                    <option value='totalReturnfla'>FLA</option>
+                    <option value='nc'>NC</option>
+                </select>
+              </label>
+              <div class='inputWrapper'>
+                <span class='required'>State</span>
+              </div>
+            </div>
+            <div class='col-sm-2'>
+              <div class='inputWrapper'>
+                <input type='text' name=''>
+                <span class='required'>Zip Code</span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 4 -->
+
+        <div class='col-xs-12'> <!-- Form control 5 -->
+          <div class='row'>
+            <div class='col-sm-5'>
+              <div class='row'>
+                <div class='col-xs-4'>
+                  <div class='inputWrapper'>
+                    <input type='text' name=''>
+                    <span class='required'>Home Phone</span>
+                  </div>
+                </div>
+                <div class='col-xs-4'>
+                    <input class='mini' type='text' name=''>
+                </div>
+                <div class='col-xs-4'>
+                    <input type='text' name=''>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 5 -->
+
+        <div class='col-xs-12'> <!-- Form control 6 -->
+          <div class='row'>
+            <div class='col-sm-5'>
+              <div class='row'>
+                <div class='col-xs-4'>
+                  <div class='inputWrapper'>
+                    <input type='text' name=''>
+                    <span>Optional Phone</span>
+                  </div>
+                </div>
+                <div class='col-xs-4'>
+                    <input class='mini' type='text' name=''>
+                </div>
+                <div class='col-xs-4'>
+                    <input type='text' name=''>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 6 -->
+
+        <div class='col-xs-12'> <!-- Form control 7 -->
+          <div class='row'>
+            <div class='col-sm-2'>
+              <div class='inputWrapper'>
+                <input type='text' name='' class='datepicker'>
+                <span class='required'>Birth Date</span>
+              </div>
+            </div>
+            <div class='col-sm-2'>
+               <div class='inputWrapper'>
+                <input type='text' name='' class='datepicker disabled'>
+                <span class='required'>Date of Hire</span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 7 -->
       </div> <!-- end #personalInfo -->
       <div class='row collapsable-header' data-target='#email'>
         <div class='col-sm-12'>
