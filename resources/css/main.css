@@ -63,6 +63,9 @@ select {
   border-radius: 0;
   height: 40px;
 }
+select.mini{
+  min-width: 75px;
+}
 #local{
   float: right;
   margin-top: -45px;
@@ -85,8 +88,8 @@ nav ul li.active:after{
   height: 5px;
   background-color: #64dd17;
 }
-input[type=date]{
-  padding: 8px 5px;
+input, input.datepicker{
+  padding: 10px 5px;
   line-height: 1;
 }
 label{
@@ -108,19 +111,19 @@ label{
   margin: 2px 20px;
   background: url('../images/submit.png') -15px -7px no-repeat;
 }
-table{
+.table{
   width: 100%;
   margin-top: 25px;
 }
-thead{
+.table thead{
   background-color: #424242;
   color: #fad53e;
   border: 1px solid #424242;
 }
-/*th{ 
+.table th{ 
   padding: 5px 10px;
   border-right: 1px solid #000;
-}*/
+}
 th:last-child{
   border: none;
 }
@@ -139,6 +142,12 @@ td{
 .plan-select{
   margin-top: 15px;
 }
+form[name=rateofReturnDateRange]{
+  margin-top: 25px;
+}
+.description{
+  padding: 5px 10px;
+}
 #rateOfReturnGraphContainer{
   position: relative;
   height: 377px;
@@ -151,4 +160,43 @@ td{
   height: 377px;
   right: 0;
   top: 0;
+}
+/*Datepicker overwrites*/
+.datepicker, .datepicker td{
+  border-radius: 0;
+  border: 1px solid #CCC;
+}
+
+.collapsable{
+  margin-top: 25px;
+}
+.collapsable hr{
+  margin-top: 0;
+}
+.collapsable-header{
+  cursor: pointer;
+}
+.collapsable-header .collapse-ctrl{
+  font-family: 'Roboto-light', helvetica, sans-serif;
+  font-size: 26px;
+  color: #039BE5;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+}
+.collapsable-header.open .collapse-ctrl{
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.collapsable-content{
+  padding: 15px 50px;
+  display: none;
+}
+.collapsable-title{
+  font-size: 16px;
+  display: inline;
 }

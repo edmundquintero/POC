@@ -13,9 +13,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/vendor/datepicker.css">
     <link rel="stylesheet" href="resources/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/main.css">
+     <!-- <link rel="stylesheet" href="resources/css/vendor/datepicker.css"> -->
     <script src="resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="resources/js/custom.js"></script>
   </head>
   <body>
   <!-- Warning for IE versions less than 7 -->
@@ -26,7 +31,8 @@
   <div id='page' class='container'>
     <div class='row'>
       <div class='col-sm-6'>
-      <h2>Personal Rate of Return</h2>
+      <h2>Edit Personal Information</h2>
+      <p class="help-block">An astrisk indicates a required field.</p>
       </div>
       <div class='col-sm-4 col-sm-offset-2'>
         <form name='planSelect'>
@@ -40,81 +46,69 @@
         </form>
       </div>
     </div>
-    <div class='row'>
-      <div class='col-xs-6'>
-        <form name='investmentType'>
-          <label class='select-label'>Select Investment Type:
-          <select>
-              <option value='totalReturn'>Total Return</option>
-              <option value='option2'>Option 2</option>
-          </select>
+
+    <div class='collapsable'>
+      <div class='row collapsable-header' data-target='#personalInfo'>
+        <div class='col-sm-12'>
+          <div class='collapsable-title'>Personal Info</div>
+          <div class='pull-right collapse-ctrl'>&#43;</div>
+        </div>
+      </div>
+      <hr />
+      <div class='row collapsable-content' id='personalInfo'>
+        <div class='col-sm-2'>
+          <div class='inputWrapper'>
+          <label class='select-label'>
+            <select class='mini'>
+                <option value='totalReturn'>Mr.</option>
+                <option value='option2'>Ms.</option>
+            </select>
           </label>
-          <input type='submit' value='submit' class='hidden'>
-        </form>
+          
+            <span> Prefix</span>
+          </div>
+        </div>
+        <div class='col-sm-4'>
+          <label></label>
+          <div class='inputWrapper'>
+            <input type='text' name=''>
+            <span>* First Name</span>
+          </div>
+        </div>
+
+      </div> <!-- end #personalInfo -->
+      <div class='row collapsable-header' data-target='#email'>
+        <div class='col-sm-12'>
+          <div class='collapsable-title'>Email</div>
+          <div class='pull-right collapse-ctrl'>&#43;</div>
+        </div>
+      </div>
+      <hr />
+      <div class='row collapsable-content' id='email'>
+        Personal stuff all up in here
+      </div>
+      <div class='row collapsable-header' data-target='#securityQuestion'>
+        <div class='col-sm-12'>
+          <div class='collapsable-title'>Security Question</div>
+          <div class='pull-right collapse-ctrl'>&#43;</div>
+        </div>
+      </div>
+      <hr />
+      <div class='row collapsable-content' id='securityQuestion'>
+        Personal stuff all up in here
+      </div>
+      <div class='row collapsable-header' data-target='#summary'>
+        <div class='col-sm-12'>
+          <div class='collapsable-title'>Summary</div>
+          <div class='pull-right collapse-ctrl'>&#43;</div>
+        </div>
+      </div>
+      <hr />
+      <div class='row collapsable-content' id='summary'>
+        Personal stuff all up in here
       </div>
     </div>
 
-    <hr />
-
-    <nav id='local'>
-      <ul>
-        <li class='active'>Annual</li>
-        <li>Quarterly</li>
-        <li>Monthly</li>
-      </ul>
-    </nav>
-
-    <div class='row'>
-      <form name=''>
-        <label>Select Date Range:</label><div class='inputWrapper'><input type='date'><span>* Begin Date</span></div>
-        <label>to</label><div class='inputWrapper'><input type='date'><span>* End Date</span></div>
-        <input type='submit' class='date-submit'>
-      </form>
-    </div>
-
-    <div class='row'>
-      <div class='col-sm-6'>
-        <table id='rateOfReturnTable' class='table table-condensed table-responsive'>
-          <thead>
-            <tr>
-              <th>Year Ending</th>
-              <th>Rate of Return (%)</th> 
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2014</td>
-              <td>Not Available%</td> 
-            </tr>
-            <tr>
-              <td>2013</td>
-              <td>Not Available%</td> 
-            </tr>
-            <tr>
-              <td>2012</td>
-              <td>Not Available%</td> 
-            </tr>
-            <tr>
-              <td>2011</td>
-              <td>Not Available%</td> 
-            </tr>
-            <tr>
-              <td>2010</td>
-              <td>Not Available%</td> 
-            </tr>
-            <tr>
-              <td>2009</td>
-              <td>Not Available%</td> 
-            </tr>
-          </tbody>
-        </table>
-      </div> <!-- end col-sm-6 -->
-      <div class='col-sm-6'>
-        <div id='rateOfReturnGraphContainer'>
-          <div id='rateOfReturnGraph'></div>
-        </div>
-      </div><!-- end col-sm-6 -->
-    </div> <!-- end row -->
       
   </div><!-- end #page -->
 

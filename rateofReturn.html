@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="resources/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+     <!-- <link rel="stylesheet" href="resources/css/vendor/datepicker.css"> -->
+    <script src="resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="resources/js/custom.js"></script>
+  </head>
+  <body>
+  <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div id='page' class='container'>
+    <div class='row'>
+      <div class='col-sm-6'>
+      <h2>Personal Rate of Return</h2>
+      </div>
+      <div class='col-sm-4 col-sm-offset-2'>
+        <form name='planSelect'>
+          <label class='select-label plan-select'>
+          <select>
+              <option value='totalReturn'>Kelly's (401k) Test Plan</option>
+              <option value='option2'>Option 2</option>
+          </select>
+          </label>
+          <input type='submit' value='submit' class='hidden'>
+        </form>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-6'>
+        <form name='investmentType'>
+          <label class='select-label'>Select Investment Type:
+          <select>
+              <option value='totalReturn'>Total Return</option>
+              <option value='option2'>Option 2</option>
+          </select>
+          </label>
+          <input type='submit' value='submit' class='hidden'>
+        </form>
+      </div>
+    </div>
+
+    <hr />
+
+    <nav id='local'>
+      <ul>
+        <li class='active'>Annual</li>
+        <li>Quarterly</li>
+        <li>Monthly</li>
+      </ul>
+    </nav>
+
+    <div class='row'>
+      <p class='description'>Sopme things in here.............</p>
+      <form name='rateofReturnDateRange'>
+        <label>Select Date Range:</label><div class='inputWrapper'><input type='text' class='datepicker'><span>* Begin Date</span></div>
+        <label>to</label><div class='inputWrapper'><input type='text' class='datepicker'><span>* End Date</span></div>
+        <input type='submit' class='date-submit'>
+      </form>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-6'>
+        <table id='rateOfReturnTable' class='table table-condensed table-responsive'>
+          <thead>
+            <tr>
+              <th>Year Ending</th>
+              <th>Rate of Return (%)</th> 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2014</td>
+              <td>Not Available%</td> 
+            </tr>
+            <tr>
+              <td>2013</td>
+              <td>Not Available%</td> 
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>Not Available%</td> 
+            </tr>
+            <tr>
+              <td>2011</td>
+              <td>Not Available%</td> 
+            </tr>
+            <tr>
+              <td>2010</td>
+              <td>Not Available%</td> 
+            </tr>
+            <tr>
+              <td>2009</td>
+              <td>Not Available%</td> 
+            </tr>
+          </tbody>
+        </table>
+      </div> <!-- end col-sm-6 -->
+      <div class='col-sm-6'>
+        <div id='rateOfReturnGraphContainer'>
+          <div id='rateOfReturnGraph'></div>
+        </div>
+      </div><!-- end col-sm-6 -->
+    </div> <!-- end row -->
+      
+  </div><!-- end #page -->
+
+  </body>
+</html>
