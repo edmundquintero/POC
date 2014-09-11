@@ -57,9 +57,9 @@ select {
   background: #fff;
   padding: 5px;
   font-size: 16px;
-  min-width: 300px;
+  min-width: 275px;
   line-height: 1;
-  border: 1px solid #999;
+  border: 1px solid #AAA;
   border-radius: 0;
   height: 40px;
 }
@@ -94,7 +94,7 @@ input, input.datepicker{
 }
 label{
   float: left;
-  padding: 10px;
+  margin: 10px;
 }
 .inputWrapper{
   float: left;
@@ -102,6 +102,12 @@ label{
 .inputWrapper span{
   display: block;
   font-size: 12px;
+  padding: 0 0 0 10px;
+}
+.inputWrapper span.required:before{
+  content: '* ';
+  position: absolute;
+  margin-left: -10px;
 }
 .date-submit{
   font-size: 0;
@@ -161,6 +167,18 @@ form[name=rateofReturnDateRange]{
   right: 0;
   top: 0;
 }
+#profileForm label{
+  margin: 0;
+  width: 100%;
+}
+#profileForm .inputWrapper{
+  width: 100%;
+}
+#profileForm input{
+  width: 100%;
+}
+
+
 /*Datepicker overwrites*/
 .datepicker, .datepicker td{
   border-radius: 0;
@@ -195,6 +213,9 @@ form[name=rateofReturnDateRange]{
 .collapsable-content{
   padding: 15px 50px;
   display: none;
+}
+.collapsable-content .row{
+  margin-top: 25px;
 }
 .collapsable-title{
   font-size: 16px;
