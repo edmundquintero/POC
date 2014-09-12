@@ -237,22 +237,22 @@ input[type=radio]{
   margin: 0;
   width: 31px;
   height: 31px;
-  /*hide the radio button*/
   filter:alpha(opacity=0);
   -moz-opacity:0;
   -khtml-opacity: 0;
   opacity: 0;
   cursor: pointer;
 }
-input[type="radio"] + .face-on{ /*the span element that immediately follow the radio button */
-  visibility: hidden; /*temporarily hide the "YES" label*/
+input[type="radio"] + .face-on{ 
+  visibility: hidden;
   background: #F5F5F5;
 }
 input[type="radio"] + .face-on:after{
   content: "";
 }
 input[type="radio"]:checked + .face-on{
-  visibility: visible; /*show the "YES" label only if the radio button is checked*/
+  visibility: visible;
+  border: none;
 }
 
 /*Datepicker overwrites*/
