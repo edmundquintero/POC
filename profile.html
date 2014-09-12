@@ -284,24 +284,24 @@
           </div>
           <div class='row'>
             <div class='col-xs-5 col-xs-offset-1'>
-              <div class='radio-group'>
-                <label>
+              <div class='radio-group row'>
+                <label class='col-sm-1'>
                   <span class='face-off'></span>
                   <input type="radio" name="emailAddress" value="home"><span class='face-on'></span><br>
                   <span class='radiolabel'>Home</span>
                 </label>
               
-                <label>
+                <label class='col-sm-1'>
                   <span class='face-off'></span>
                   <input type="radio" name="emailAddress" value="office"><span class='face-on'></span><br>
                   <span class='radiolabel'>Office</span>
                 </label>
-                <label>
+                <label class='col-sm-1'>
                   <span class='face-off'></span>
                   <input type="radio" name="emailAddress" value="other"><span class='face-on'></span><br>
                   <span class='radiolabel'>Other</span>
                 </label>
-                <label>
+                <label class='col-sm-1'>
                   <span class='face-off'></span>
                   <input type="radio" name="emailAddress" value="none"><span class='face-on'></span><br>
                   <span class='radiolabel'>None</span>
@@ -319,8 +319,7 @@
             </div>
           </div>
         </div>
-
-      </div>
+      </div><!-- end #email -->
       <div class='row collapsable-header' data-target='#securityQuestion'>
         <div class='col-sm-12'>
           <div class='collapsable-title'>Security Question</div>
@@ -329,7 +328,83 @@
       </div>
       <hr />
       <div class='row collapsable-content' id='securityQuestion'>
-        Personal stuff all up in here
+        <p class='description'>Each time you log into this site from an unknown computer you will be asked to answer a question as an additional security step.</p>
+        <div class='col-xs-12'> <!-- Form control 1 -->
+          <div class='row'>
+            <div class='col-xs-5'>
+              <label class='select-label'>
+                <select>
+                    <option value=''>What is your alternate question #1</option>
+                    <option value=''>What is the airspeed velocity of an unladen swallow?</option>
+                </select>
+              </label>
+              <div class='inputWrapper'>
+                <span class='required'>Security Question</span>
+              </div>
+            </div>
+            <div class='col-sm-5 col-sm-offset-2'>
+              <label class='select-label'>
+                <select>
+                    <option value=''>What is your alternate question #2</option>
+                    <option value=''>What is the airspeed velocity of an unladen swallow?</option>
+                </select>
+              </label>
+              <div class='inputWrapper'>
+                <span class='required'>Security Question</span>
+              </div>
+            </div>
+            <div class='col-sm-5'>
+              <div class='inputWrapper'>
+                <input type='text' name='' value=''>
+                <span class='required'>Answer</span>
+              </div>
+            </div>
+             <div class='col-sm-5 col-sm-offset-2'>
+              <div class='inputWrapper'>
+                <input type='text' name=''>
+                <span class='required'>Answer</span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 1 -->
+        <div class='col-xs-12'> <!-- Form control 2 -->
+          <div class='row'>
+            <div class='col-xs-5'>
+              <label class='select-label'>
+                <select>
+                    <option value=''>What is your alternate question #3</option>
+                    <option value=''>What is the airspeed velocity of an unladen swallow?</option>
+                </select>
+              </label>
+              <div class='inputWrapper'>
+                <span class='required'>Security Question</span>
+              </div>
+            </div>
+            <div class='col-sm-5 col-xs-offset-2'>
+              <label class='select-label'>
+                <select>
+                    <option value=''>What is your alternate question #4</option>
+                    <option value=''>What is the airspeed velocity of an unladen swallow?</option>
+                </select>
+              </label>
+              <div class='inputWrapper'>
+                <span class='required'>Security Question</span>
+              </div>
+            </div>
+            <div class='col-xs-5'>
+              <div class='inputWrapper'>
+                <input type='text' name='' value=''>
+                <span class='required'>Answer</span>
+              </div>
+            </div>
+             <div class='col-xs-5 col-xs-offset-2'>
+              <div class='inputWrapper'>
+                <input type='text' name=''>
+                <span class='required'>Answer</span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end form control 2 -->
       </div>
       <div class='row collapsable-header' data-target='#summary'>
         <div class='col-sm-12'>
