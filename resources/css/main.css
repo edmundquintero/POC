@@ -198,9 +198,15 @@ form[name=rateofReturnDateRange]{
 .radiolabel.long{
   margin-left: -50px;
 }
-/*input[type=radio]{
-  background-color: blue;
-}*/
+.gender .radiolabel{
+  position: relative;
+  left: 30px;
+  bottom: 5px;
+}
+#profileForm .gender label{
+  width: 60px;
+  margin-right: 15px;
+}
 .face-on, .face-off{
   position: absolute;
   left: 20px;
@@ -213,10 +219,6 @@ form[name=rateofReturnDateRange]{
   text-align: center;
   background: #F5F5F5;
   margin-bottom: 10px;
-}
- 
-.face-off:after{
-  content: ""; /*if CSS is disabled span elements are not displayed*/
 }
 input[type=radio]{
   position: absolute;
@@ -247,7 +249,6 @@ input[type="radio"]:checked + .face-on{
   border-radius: 0;
   border: 1px solid #CCC;
 }
-
 .collapsable{
   margin-top: 25px;
 }
@@ -261,12 +262,13 @@ input[type="radio"]:checked + .face-on{
   font-family: 'Roboto-light', helvetica, sans-serif;
   font-size: 26px;
   color: #039BE5;
-  -webkit-transition: all .5s linear;
-  -moz-transition: all .5s linear;
-  -o-transition: all .5s linear;
-  transition: all .5s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
 }
 .collapsable-header.open .collapse-ctrl{
+  font-family: 'Roboto', helvetica, sans-serif;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -279,6 +281,9 @@ input[type="radio"]:checked + .face-on{
 }
 .collapsable-content .row{
   margin-top: 25px;
+}
+.collapsable-content .row.short{
+  margin-top: 0;
 }
 .collapsable-title{
   font-size: 16px;

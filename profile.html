@@ -106,10 +106,21 @@
                 <span class='required'>Maritial Status</span>
               </div>
             </div>
-            <div class='col-sm-3'>
-              <div class='inputWrapper'>
-                <input type='text' name=''>
-                <span class='required'>Gender</span>
+            <div class='col-sm-3 col-sm-offset-1'>
+               <div class='radio-group gender row short'>
+                <label class='col-sm-1'>
+                  <span class='face-off'></span>
+                  <input type="radio" name="gender" value="male"><span class='face-on'></span>
+                  <span class='radiolabel'>Male</span>
+                </label>
+                <label class='col-sm-1'>
+                  <span class='face-off'></span>
+                  <input type="radio" name="gender" value="female"><span class='face-on'></span>
+                  <span class='radiolabel'>Female</span>
+                </label>
+                <div class='inputWrapper'>
+                  <span class='required'>Gender</span>
+                </div>
               </div>
             </div>
           </div>
@@ -415,6 +426,12 @@
       <hr />
       <div class='row collapsable-content' id='summary'>
         Personal stuff all up in here
+
+        <span class='slider-toggle-label'>On</span>
+        <div class='slider-toggle'></div>
+        <span class='slider-toggle-label'>Off</span>
+
+
       </div>
     </div> <!-- end collapsable -->
 
