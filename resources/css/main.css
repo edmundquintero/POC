@@ -112,23 +112,28 @@ label{
   position: absolute;
   margin-left: -10px;
 }
-button[type=submit], input[type=submit]{
-  font-size: 0;
+a.button{
+  display: inline-block;
   text-transform: uppercase;
-  width: 120px; 
-  height:37px; 
-  border: none;
-  margin: 2px 20px;
-  background: url('../images/submit.png') -15px -7px no-repeat;
-}
-button[type=reset], input[type=reset]{
-  font-family: 'Roboto-bold', helvetica, sans-serif;
-  text-transform: uppercase;
+  text-align: center;
   width: 120px; 
   height:37px; 
   border: 1px solid #AAA;
   border-radius: 2px;
   margin: 2px 20px;
+  padding: 7px;
+  color: #616161;
+}
+a.button.submit,  button[type=submit], input[type=submit]{
+  float: right;
+  font-size: 0;
+  border: none;
+  background: url('../images/submit.png') -15px -7px no-repeat;
+}
+a.button.reset, button[type=reset], input[type=reset]{
+  font-family: 'Roboto-bold', helvetica, sans-serif;
+  background-color: #BBB;
+  float: right;
 }
 .table{
   width: 100%;
