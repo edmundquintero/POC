@@ -1,0 +1,384 @@
+// @import "./main.css";
+
+@tablet:    ~"only screen and (max-width: 1024px)";
+@font-face {
+  font-family: 'Roboto-light';
+  src: url('../fonts/RobotoTTF/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoTTF/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-medium';
+  src: url('../fonts/RobotoTTF/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url('../fonts/RobotoTTF/Roboto-Bold.ttf');
+}
+@font-face{ 
+  font-family: 'tpaCustom';
+  src: url('../fonts/tpaCustom.eot');
+  src: url('../fonts/tpaCustom.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/tpaCustom.woff') format('woff'),
+       url('../fonts/tpaCustom.ttf') format('truetype'),
+       url('../fonts/tpaCustom.svg#webfont') format('svg');
+}
+[data-icon]:before {
+        font-family: 'tpaCustom';
+        content: attr(data-icon);
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+
+
+
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+  background-image: -moz-linear-gradient(left, @startColor, @endColor);
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+.gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+
+/* 
+ *  THEME
+ */
+
+// Main menu gradient colors
+@mainmenu-dark-grey: #3C3C3C;
+@mainmenu-light-grey: #37474F;
+@mainmenu-selected: #323334;
+
+@yellow: #FAD53E;
+@mainmenuFont: #FFF;
+@submenuFont: #616161;
+
+
+@light-grey: #FAFAFA;
+
+
+@padding-sm: 10px;
+@padding-med: 15px;
+@padding-lg: 20px;
+
+html{
+  height: 100%;
+}
+body{
+  font-family: 'Roboto', helvetica, sans-serif;
+  backgroud-color: #FAFAFA;
+  height: 100%;
+  line-height: 1.5;
+}
+
+
+
+
+
+a, a:hover{
+  text-decoration: none;
+}
+
+
+// Main Header
+
+header.mainHeader{
+  height: 150px;
+}
+
+
+// Navigation
+
+nav{
+  font-size: 18px;
+  >ul li ul{
+    display: none;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  a{
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+nav >ul >li.active{
+ ul{
+  position: absolute;
+  display: inline-block;
+  }
+  >div a{
+    color: @yellow;
+  }
+}
+
+nav.top-top{
+  >ul{
+    .gradient(@mainmenu-light-grey, @mainmenu-dark-grey);
+    overflow: visible;
+    z-index: 10;
+    a{
+      color: @mainmenuFont;
+    }
+    >li{
+      display: inline-block;
+      a{
+        position: relative;
+        display: block;
+        padding: @padding-med @padding-lg;
+        &:hover{
+          text-decoration: underline;
+        }
+        span.glyphicons{
+          padding-right: @padding-med;
+        }
+      }
+      >ul {
+        a{
+          color: @submenuFont;
+        }
+        padding: 0;
+        width: 300px;
+        font-family: 'Roboto', helvetica, sans-serif;
+        background-color: fade(@light-grey, 95%);
+        box-shadow: 0px 3px 8px -1px darken(@light-grey, 20%);
+        z-index: 50;
+        >li a{
+          text-align: left;
+          border-bottom: 1px solid darken(@light-grey, 10%);
+          padding: @padding-med;
+          padding-left: 35px;
+          &:hover{
+            background-color: lighten(@light-grey, 5%);
+            border-left: 5px solid @yellow;
+            padding-left: 30px;
+          }
+          &:last-child{
+            border-radius: 0 0 2px 2px;
+          }
+        }
+      }
+      &.active{
+        background-color: @mainmenu-selected;
+        font-family: 'Roboto-bold', helvetica, sans-serif;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+nav.top-horizontal{
+  >ul{
+    .gradient(@mainmenu-light-grey, @mainmenu-dark-grey);
+    overflow: visible;
+    a{
+      color: @mainmenuFont;
+    }
+    >li{
+      display: inline-block;
+      a{
+        position: relative;
+        display: block;
+        padding: @padding-med @padding-lg;
+        span.glyphicons{
+          padding-right: @padding-med;
+        }
+      }
+      >ul {
+        a{
+          color: @submenuFont;
+        }
+        position: absolute;
+        left: 0;
+        // padding: 0;
+        width: 100%;
+        border-bottom: 1px solid darken(@light-grey, 5%);
+        // box-shadow: 1px 3px 8px -2px darken(@light-grey, 15%);
+        >li {
+          display: inline-block;
+          a{
+            position: relative;
+            padding: @padding-sm;
+            text-align: center;
+            &:after{
+              content: ' ';
+              position: absolute;
+              height: 0px;
+              background-color: @yellow;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              transition: all 0.1s;
+            }
+            &:active{
+              box-shadow: inset 2px 2px 6px -5px #666;
+            }
+          }
+          &.active a:after, a:hover:after{
+            content: ' ';
+            position: absolute;
+            background-color: @yellow;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 3px;
+          }
+        }
+      }
+      &.active{
+        background-color: @mainmenu-selected;
+      }
+    }
+  }
+}
+
+nav.top-side{
+  >ul{
+    .gradient(@mainmenu-light-grey, @mainmenu-dark-grey);
+    overflow: visible;
+    z-index: 10;
+    a{
+      color: @mainmenuFont;
+    }
+    >li{
+      display: inline-block;
+      a{
+        position: relative;
+        display: block;
+        padding: @padding-med @padding-lg;
+        &:hover{
+          text-decoration: underline;
+        }
+        span.glyphicons{
+          padding-right: @padding-med;
+        }
+      }
+      >ul {
+        a{
+          color: @light-grey;
+        }
+        padding: 0;
+        width: 220px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        font-family: 'Roboto', helvetica, sans-serif;
+        background-color: @mainmenu-dark-grey;
+        z-index: 50;
+        >li{
+          a{
+            border-bottom: 1px solid lighten(@mainmenu-dark-grey, 10%);
+            padding: @padding-med;
+            padding-left: 35px;
+            text-align: left;
+          }
+          &:first-child a{
+            border-top: 1px solid lighten(@mainmenu-dark-grey, 10%);
+          }
+          &.active a, &:hover a{
+            border-left: 5px solid @yellow;
+            padding-left: 30px;
+          }
+          &.active a{
+            background-color: @mainmenu-selected;
+            color: @yellow;
+          }
+        }
+      }
+      &.active{
+        background-color: @mainmenu-selected;
+        font-family: 'Roboto-bold', helvetica, sans-serif;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// MOBILE 
+
+@media @tablet{
+
+  nav.mainNav{
+    >ul{
+      background: #333;
+      overflow: visible;
+      padding: 0;
+      max-width: 220px;
+      a{
+        color: @mainmenuFont;
+      }
+      >li{
+        position: relative;
+        border: 1px solid #555;
+        border-top: none;
+        display: block;
+        &.active{
+          background: #222;
+        }
+        &.active >div a, &:hover >div >a{
+          border-left: 5px solid @yellow;
+        }
+        a{
+          text-align: right;
+          position: relative;
+          display: block;
+          padding: @padding-med @padding-lg;
+          span::before{
+            left: 0;
+          }
+        }
+        >ul {
+          a{
+            color: @submenuFont;
+          }
+          position: relative;
+          padding: 0;
+          width: 100%;
+          background-color: #222;
+          box-shadow: none;
+          >li {
+            display: block;
+            a{
+              text-align: right;
+              border: 1px solid #555;
+              border-bottom: none;
+              position: relative;
+              &:active{
+                box-shadow: inset 2px 2px 6px -1px #000;
+              }
+            }
+            &.active a:after, a:hover:after{
+              content: '';
+              position: absolute;
+              height: 0px;
+              background: none;
+              left: 0;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
