@@ -69,13 +69,22 @@
 @mainmenuFont: #FFF;
 @submenuFont: #616161;
 
+@footer-back-dark: #000;
+@footer-back-light: #FFF;
+
+@footer-font-dark: #000;
+@footer-font-light: #FFF;
 
 @light-grey: #FAFAFA;
 
+@profile-color: #546E7A;
+@profile-background: #ECEFF1;
 
 @padding-sm: 10px;
 @padding-med: 15px;
 @padding-lg: 20px;
+
+@hero-height: 150px;
 
 html{
   height: 100%;
@@ -85,10 +94,8 @@ body{
   backgroud-color: #FAFAFA;
   height: 100%;
   line-height: 1.5;
+  overflow-x: hidden;
 }
-
-
-
 
 
 a, a:hover{
@@ -99,17 +106,43 @@ a, a:hover{
 // Main Header
 
 header.mainHeader{
-  height: 150px;
+  height: @hero-height;
+  nav.options-bar{
+    min-height: 35px;
+    ul{
+      float: right;
+      padding: 0 @padding-lg 0 0;
+      margin: 0;
+      li{
+        display: inline-block;
+        padding: @padding-sm @padding-med;
+      }
+    }
+  }
+  .primary-logo{
+    float: left;
+    margin: 0 @padding-sm;
+    min-height: 100px;
+    min-width: 100px;
+    background-color: #000;
+  }
+  .secondary-logo{
+    float: right;
+    margin: 0 @padding-sm;
+    min-height: 100px;
+    min-width: 100px;
+    background-color: #000;
+  }
 }
 
 
 // Navigation
 
 nav{
-  font-size: 18px;
+  font-size: 1.125em;
   >ul li ul{
     display: none;
-    font-size: 16px;
+    font-size: 0.875em;
     font-weight: normal;
   }
   a{
@@ -117,15 +150,16 @@ nav{
     width: 100%;
     min-height: 100%;
   }
-}
-
-nav >ul >li.active{
- ul{
-  position: absolute;
-  display: inline-block;
+  & >ul >li.active{
+    >div a{
+      color: @yellow;
+    }
   }
-  >div a{
-    color: @yellow;
+  &.top-horizontal >ul >li.active, &.top-side >ul >li.active{
+    ul{
+    // position: absolute;
+    display: inline-block;
+    }
   }
 }
 
@@ -151,15 +185,15 @@ nav.top-top{
         }
       }
       >ul {
-        a{
-          color: @submenuFont;
-        }
         padding: 0;
         width: 300px;
         font-family: 'Roboto', helvetica, sans-serif;
         background-color: fade(@light-grey, 95%);
         box-shadow: 0px 3px 8px -1px darken(@light-grey, 20%);
         z-index: 50;
+        a{
+          color: @submenuFont;
+        }
         >li a{
           text-align: left;
           border-bottom: 1px solid darken(@light-grey, 10%);
@@ -173,6 +207,11 @@ nav.top-top{
           &:last-child{
             border-radius: 0 0 2px 2px;
           }
+        }
+        &.submenuShow{
+          display: inline-block;
+          position: absolute;
+          opacity: 1;
         }
       }
       &.active{
@@ -311,9 +350,175 @@ nav.top-side{
   }
 }
 
-// MOBILE 
+
+nav.profile{
+  position: absolute;
+  top: 0;
+  right: -325px;
+  border-left: 1px solid ;
+  width: 325px;
+  height: 100%;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+  .userinfo{
+    padding: @padding-med;
+    text-align: right;
+    font-size: 0.875em;
+    color: @profile-color;
+    .name{
+      font-size: 1.143em;
+    }
+  }
+  .profileHeader{
+    height: @hero-height;
+    background-color: @profile-background;
+    .closeProfile{
+      font-size: 1.875em;
+      font-family: 'Roboto-light', helvetica, sans-serif;
+      padding: @padding-sm;
+      color: @yellow;
+      cursor: pointer;
+    }  
+  }
+  >ul{
+    background: #333;
+    overflow: visible;
+    padding: 0;
+    height: 100%;
+    a{
+      color: @yellow;
+    }
+    >li{
+      position: relative;
+      border-bottom: 1px solid #555;
+      display: block;
+      &:hover >div >a{
+        border-left: 5px solid @yellow;
+        padding-left: 15px;
+        // box-shadow: inset 1px 1px 5px -2px #000;
+      }
+      a{
+        text-align: left;
+        position: relative;
+        display: block;
+        padding: @padding-med @padding-lg;
+      }
+    }
+  }
+  &.active{
+    right: 0;  
+  }
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 75;
+  color: @footer-font-dark;
+  background-color: @footer-back-light;
+  .col3{
+    float: left;
+    width: 33.33%;
+    padding: @padding-med 50px;
+    .footer-logo{
+      text-align: left;
+    }
+    .privacy-policy{
+      width: 300px;
+      margin: 0 auto;
+    }
+    nav.footer-nav{
+      float: right;
+      font-size: 14px;
+      .dropup-menu{
+        ul{
+          .gradient(@mainmenu-light-grey, @mainmenu-dark-grey);
+          li{
+            padding: @padding-med;
+            font-size: 14px;
+            a{
+              color: @yellow;
+            }
+            &:hover a{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.top-side{
+    background-color: @footer-back-dark;
+    .privacy-policy > a, .dropup-menu > a{
+      background-color: @footer-back-dark;
+      color: @footer-font-light;
+    }
+    .footer-logo svg{
+      fill: @footer-font-light;
+      max-height: 35px;
+      max-width: 175px;
+    }
+  }
+}
+
+
+.clear-fix{
+  clear: both;
+}
+.mobile{
+  display: none;
+}
+// Overlay
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 50;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.dropup-menu{
+  ul{
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    min-width: 300px;
+    &.active{
+      display: inline;
+    }
+    li{
+      color: @yellow;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      right: 25%;
+      bottom: -15px;
+      width: 0; 
+      height: 0; 
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid @mainmenu-dark-grey;
+    }
+  }
+}
+
+
+// --- MOBILE 
 
 @media @tablet{
+
+  .desktop{
+    display: none;
+  }
 
   nav.mainNav{
     >ul{
@@ -378,6 +583,12 @@ nav.top-side{
       }
     }
   }
+
+  // header.mainHeader{
+  //   nav.options-bar ul li:first-child{
+  //     display: block;
+  //   }
+  // }
 
 }
 
