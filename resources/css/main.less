@@ -26,18 +26,15 @@
        url('../fonts/tpaCustom.svg#webfont') format('svg');
 }
 [data-icon]:before {
-        font-family: 'tpaCustom';
-        content: attr(data-icon);
-        speak: none;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-    }
-
-
-
+  font-family: 'tpaCustom';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
 .horizontal-gradient (@startColor: #eee, @endColor: white) {
   background-color: @startColor;
   background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
@@ -54,7 +51,6 @@
   background: -ms-linear-gradient(top, @startColor, @endColor);
   background: -o-linear-gradient(top, @startColor, @endColor);
 }
-
 
 /* 
  *  THEME
@@ -76,35 +72,165 @@
 @footer-font-light: #FFF;
 
 @light-grey: #FAFAFA;
+@background-color: #FAFAFA;
+@basefont-color: #616161;
 
 @profile-color: #546E7A;
 @profile-background: #ECEFF1;
 
+@radio-buttons: #039BE5;
+@collapse-ctrl: #039BE5;
+
+@padding-xsm: 5px;
 @padding-sm: 10px;
 @padding-med: 15px;
 @padding-lg: 20px;
 
 @hero-height: 150px;
 
+//--------------------------------------
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 html{
   height: 100%;
 }
 body{
   font-family: 'Roboto', helvetica, sans-serif;
-  backgroud-color: #FAFAFA;
+  font-size: 16px;
+  background-color: @background-color;
+  color: @basefont-color;
   height: 100%;
   line-height: 1.5;
   overflow-x: hidden;
 }
-
-
-a, a:hover{
-  text-decoration: none;
+a, a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+hr{
+  border-color: #CCC;
 }
 
+form{
+  select {
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    min-width: 275px;
+    line-height: 1;
+    border: 1px solid #AAA;
+    border-radius: 0;
+    height: 43px;
+    font-size: 0.875em;
+    margin-top: @padding-lg;
+    width: 100%;
+    &.mini{
+      min-width: 75px;
+      max-width: 208px;
+    }
+
+  }
+  .disabled{
+    pointer-events: none;
+    color: #919191;
+  }
+  label{
+    margin: 0;
+    width: 100%;
+  }
+  input, input.datepicker{
+    padding: @padding-sm @padding-xsm;
+    margin-top: @padding-lg;
+    line-height: 1;
+    width: 100%;
+  }
+  .inputWrapper{
+    float: left;
+    width: 100%;
+  }
+  .inputWrapper span{
+    display: block;
+    font-size: .750em;
+    padding: 0 0 0 @padding-sm;
+  }
+  .inputWrapper span.required:before{
+    content: '* ';
+    position: absolute;
+    margin-left: -10px;
+  }
+  .description{
+    font-size: 1em;
+    margin: @padding-lg 0 -10px 0;
+  }
+  .radio-group{
+    margin-top: @padding-lg;
+    padding-top: @padding-sm;
+    label {
+      position: relative;
+      text-align: center;
+      width: 60px;
+      .radiolabel{
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 5px 0 0 0;
+        font-size: 0.875em;
+        white-space: nowrap;
+        overflow: visible;
+      }
+    }
+    .face-on, .face-off{
+      position: absolute;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 50%;
+      border: 1px solid #CCC;
+      color: #FFF;
+      text-align: center;
+      background: @background-color;
+      margin-bottom: 10px;
+    }
+    .face-on svg {
+      fill: @radio-buttons;
+      background-color: transparent;
+      margin: -3px 0 0 -2px;
+    }
+    input[type=radio]{
+      position: absolute;
+      right: 0;
+      margin: 0;
+      width: 31px;
+      height: 31px;
+      filter:alpha(opacity=0);
+      -moz-opacity:0;
+      -khtml-opacity: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    input[type="radio"] + .face-on{ 
+      visibility: hidden;
+      background: @background-color;
+    }
+    input[type="radio"] + .face-on:after{
+      content: "";
+    }
+    input[type="radio"]:checked + .face-on{
+      visibility: visible;
+      border: none;
+    }
+  } // .radio-group
+} //form
 
 // Main Header
-
 header.mainHeader{
   height: @hero-height;
   nav.options-bar{
@@ -188,19 +314,19 @@ nav.top-top{
         padding: 0;
         width: 300px;
         font-family: 'Roboto', helvetica, sans-serif;
-        background-color: fade(@light-grey, 95%);
-        box-shadow: 0px 3px 8px -1px darken(@light-grey, 20%);
+        background-color: fade(@background-color, 95%);
+        box-shadow: 0px 3px 8px -1px darken(@background-color, 20%);
         z-index: 50;
         a{
           color: @submenuFont;
         }
         >li a{
           text-align: left;
-          border-bottom: 1px solid darken(@light-grey, 10%);
+          border-bottom: 1px solid darken(@background-color, 10%);
           padding: @padding-med;
           padding-left: 35px;
           &:hover{
-            background-color: lighten(@light-grey, 5%);
+            background-color: lighten(@background-color, 5%);
             border-left: 5px solid @yellow;
             padding-left: 30px;
           }
@@ -248,7 +374,7 @@ nav.top-horizontal{
         left: 0;
         // padding: 0;
         width: 100%;
-        border-bottom: 1px solid darken(@light-grey, 5%);
+        border-bottom: 1px solid darken(@background-color, 5%);
         // box-shadow: 1px 3px 8px -2px darken(@light-grey, 15%);
         >li {
           display: inline-block;
@@ -457,12 +583,14 @@ footer{
     }
     .footer-logo svg{
       fill: @footer-font-light;
-      max-height: 35px;
-      max-width: 175px;
     }
   }
 }
 
+.footer-logo svg{
+  max-height: 35px;
+  max-width: 175px;
+}
 
 .clear-fix{
   clear: both;
@@ -470,8 +598,14 @@ footer{
 .mobile{
   display: none;
 }
-// Overlay
 
+
+// Datepicker overwrites
+.datepicker, .datepicker td{
+  border-radius: 0;
+  border: 1px solid #CCC;
+}
+// Overlay
 .overlay{
   position: fixed;
   top: 0;
@@ -483,7 +617,7 @@ footer{
   z-index: 50;
   background-color: rgba(0,0,0,0.7);
 }
-
+// Drop-up menu
 .dropup-menu{
   ul{
     display: none;
@@ -510,6 +644,59 @@ footer{
     }
   }
 }
+
+.collapsable{
+  margin-top: @padding-lg;
+  hr{
+    margin-top: 0;
+  }
+  .collapsable-header{
+    cursor: pointer;
+    .collapsable-title{
+      font-size: 1em;
+      display: inline;
+    }
+    .collapse-ctrl {
+      font-family: 'Roboto-light', helvetica, sans-serif;
+      font-size: 26px;
+      color: @collapse-ctrl;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+    }
+    &.open .collapse-ctrl{
+      font-family: 'Roboto', helvetica, sans-serif;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  .collapsable-content{
+    padding: 15px 50px 50px 50px;
+    display: none;
+  }
+}
+
+#profileForm{
+  .gender {
+    .radiolabel{
+      position: relative;
+      left: 30px;
+      bottom: 5px;
+    }
+    .inputWrapper{
+      margin-left: 20px;
+    }
+    label{
+      width: 60px;
+      margin-right: 15px;
+    }
+  }
+}
+
 
 
 // --- MOBILE 

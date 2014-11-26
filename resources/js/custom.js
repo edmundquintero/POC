@@ -1,5 +1,10 @@
-$(function(){
+;
+jQuery.noConflict();
+
+(function($){
   'use strict';
+
+$(document).ready(function(){
 
   $('.datepicker').datepicker();
 
@@ -45,5 +50,6 @@ $(function(){
     $(this).next('ul').toggleClass('active');
   });
 
-
 });
+
+})(jQuery);

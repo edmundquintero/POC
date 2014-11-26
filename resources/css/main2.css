@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'Roboto-light';
+  src: url('../fonts/RobotoTTF/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoTTF/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-medium';
+  src: url('../fonts/RobotoTTF/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url('../fonts/RobotoTTF/Roboto-Bold.ttf');
+}
+@font-face{ 
+  font-family: 'tpaCustom';
+  src: url('../fonts/tpaCustom.eot');
+  src: url('../fonts/tpaCustom.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/tpaCustom.woff') format('woff'),
+       url('../fonts/tpaCustom.ttf') format('truetype'),
+       url('../fonts/tpaCustom.svg#webfont') format('svg');
+}
+[data-icon]:before {
+        font-family: 'tpaCustom';
+        content: attr(data-icon);
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+body{
+  background-color: #F5F5F5;
+  font-family: 'Roboto', helvetica, sans-serif;
+  color: #616161;
+}
+ul{
+  list-style-type: none;
+}
+hr{
+  border-color: #CCC;
+}
+select {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  min-width: 275px;
+  line-height: 1;
+  border: 1px solid #AAA;
+  border-radius: 0;
+  height: 40px;
+}
+select.mini{
+  min-width: 75px;
+}
+.disabled{
+  pointer-events: none;
+  color: #919191;
+}
+#local{
+  float: right;
+  margin-top: -45px;
+  margin-right: 15px;
+}
+nav ul li{
+  position: relative;
+  display: inline;
+  padding: 7px 10px;
+}
+nav ul li.active{
+  font-family: 'Roboto-bold', helvetica, sans-serif;
+}
+nav ul li.active:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: #64dd17;
+}
+input, input.datepicker{
+  padding: 10px 5px;
+  line-height: 1;
+}
+label{
+  float: left;
+  margin: 10px;
+}
+.inputWrapper{
+  float: left;
+}
+.inputWrapper span{
+  display: block;
+  font-size: 12px;
+  padding: 0 0 0 10px;
+}
+.inputWrapper span.required:before{
+  content: '* ';
+  position: absolute;
+  margin-left: -10px;
+}
+.date-submit{
+  font-size: 0;
+  width: 120px; 
+  height:37px; 
+  border: none;
+  margin: 2px 20px;
+  background: url('../images/submit.png') -15px -7px no-repeat;
+}
+.table{
+  width: 100%;
+  margin-top: 25px;
+}
+.table thead{
+  background-color: #424242;
+  color: #fad53e;
+  border: 1px solid #424242;
+}
+.table th{ 
+  padding: 5px 10px;
+  border-right: 1px solid #000;
+}
+th:last-child{
+  border: none;
+}
+tbody{
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+tbody tr:nth-child(even) {
+  background-color: #DDD;
+}
+td{
+  border-right: 1px solid #CCC;
+  text-align: right;
+  padding: 5px 15px;
+}
+.plan-select{
+  margin-top: 15px;
+}
+form[name=rateofReturnDateRange]{
+  margin-top: 25px;
+}
+.description{
+  padding: 5px 10px;
+}
+#rateOfReturnGraphContainer{
+  position: relative;
+  height: 377px;
+  width: 100%;
+}
+#rateOfReturnGraph{
+  background: url('../images/chart.jpg') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 377px;
+  right: 0;
+  top: 0;
+}
+#profileForm label{
+  margin: 0;
+  width: 100%;
+}
+#profileForm .radio-group {
+  padding-top: 15px;
+}
+#profileForm .radio-group label {
+  position: relative;
+  text-align: center;
+  width: 60px;
+}
+#profileForm .inputWrapper{
+  width: 100%;
+}
+#profileForm input{
+  width: 100%;
+  margin: 5px auto;
+}
+.radiolabel{
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 5px 0 0 0;
+  white-space: nowrap;
+  overflow: visible;
+}
+.radiolabel.long{
+  margin-left: -50px;
+}
+.gender .radiolabel{
+  position: relative;
+  left: 30px;
+  bottom: 5px;
+}
+.gender .inputWrapper{
+  margin-left: 20px;
+}
+#profileForm .gender label{
+  width: 60px;
+  margin-right: 15px;
+}
+.face-on, .face-off{
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  border: 1px solid #CCC;
+  color: #FFF;
+  text-align: center;
+  background: #F5F5F5;
+  margin-bottom: 10px;
+}
+.face-on svg {
+  fill: #039BE5;
+  background-color: transparent;
+  margin: -3px 0 0 -2px;
+}
+input[type=radio]{
+  position: absolute;
+  right: 0;
+  margin: 0;
+  width: 31px;
+  height: 31px;
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type="radio"] + .face-on{ 
+  visibility: hidden;
+  background: #F5F5F5;
+}
+input[type="radio"] + .face-on:after{
+  content: "";
+}
+input[type="radio"]:checked + .face-on{
+  visibility: visible;
+  border: none;
+}
+
+/*Datepicker overwrites*/
+.datepicker, .datepicker td{
+  border-radius: 0;
+  border: 1px solid #CCC;
+}
+.collapsable{
+  margin-top: 25px;
+}
+.collapsable hr{
+  margin-top: 0;
+}
+.collapsable-header{
+  cursor: pointer;
+}
+.collapsable-header .collapse-ctrl{
+  font-family: 'Roboto-light', helvetica, sans-serif;
+  font-size: 26px;
+  color: #039BE5;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.collapsable-header.open .collapse-ctrl{
+  font-family: 'Roboto', helvetica, sans-serif;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.collapsable-content{
+  padding: 15px 50px 50px 50px;
+  display: none;
+}
+.collapsable-content .row{
+  margin-top: 25px;
+}
+.collapsable-content .row.short{
+  margin-top: 0;
+}
+.collapsable-title{
+  font-size: 16px;
+  display: inline;
+}
