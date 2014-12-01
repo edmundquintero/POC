@@ -65,6 +65,8 @@
 @mainmenuFont: #FFF;
 @submenuFont: #616161;
 
+@localmenu-selected: #64DD17;
+
 @footer-back-dark: #000;
 @footer-back-light: #FFF;
 
@@ -80,6 +82,11 @@
 
 @radio-buttons: #039BE5;
 @collapse-ctrl: #039BE5;
+
+@table-header-color: #FAD53E;
+@table-header-border: #424242;
+@table-row-background: #DDD;
+@table-border: #CCC;
 
 @padding-xsm: 5px;
 @padding-sm: 10px;
@@ -126,13 +133,13 @@ form{
     line-height: 1;
     border: 1px solid #AAA;
     border-radius: 0;
-    height: 43px;
-    font-size: 0.875em;
+    height: 40px;
+    font-size: 1em;
     margin-top: @padding-lg;
-    width: 100%;
+    // width: 100%;
     &.mini{
       min-width: 75px;
-      max-width: 208px;
+      max-width: 200px;
     }
 
   }
@@ -143,27 +150,37 @@ form{
   label{
     margin: 0;
     width: 100%;
+    font-size: 0.875em;
   }
   input, input.datepicker{
     padding: @padding-sm @padding-xsm;
     margin-top: @padding-lg;
     line-height: 1;
     width: 100%;
+    height: 40px;
+    position: relative;
   }
   .inputWrapper{
     float: left;
-    width: 100%;
-  }
-  .inputWrapper span{
-    display: block;
-    font-size: .750em;
-    padding: 0 0 0 @padding-sm;
-  }
-  .inputWrapper span.required:before{
-    content: '* ';
-    position: absolute;
-    margin-left: -10px;
-  }
+    &.mini{
+      min-width: 75px;
+      max-width: 200px;
+    }
+    &.full{
+      width: 100%;
+    }
+    span{
+      display: block;
+      font-size: .750em;
+      padding: 0 0 0 @padding-sm;
+      &.required:before{
+        content: '* ';
+        position: absolute;
+        margin-left: -10px;
+      }
+    }
+  } 
+
   .description{
     font-size: 1em;
     margin: @padding-lg 0 -10px 0;
@@ -229,6 +246,37 @@ form{
     }
   } // .radio-group
 } //form
+
+table{
+  margin-top: @padding-lg;
+  thead{
+    .gradient(@mainmenu-light-grey, @mainmenu-dark-grey);
+    color: @table-header-color;
+    font-size: 0.875em;
+    border: 1px solid @table-header-border;
+    tr{
+      th{
+        border-right: 1px solid darken(@table-header-border, 15%);
+        &:last-child{
+          border: none;
+        }
+      }
+    }
+  }
+  tbody{
+    border-left: 1px solid @table-border;
+    border-bottom: 1px solid @table-border;
+    tr{
+      &:nth-child(even){
+        background-color: @table-row-background;
+      }
+      td{
+        border-right: 1px solid @table-border;
+        text-align: right;
+      }
+    }
+  }
+  } //table
 
 // Main Header
 header.mainHeader{
@@ -536,6 +584,32 @@ nav.profile{
   }
 }
 
+nav.tabbed{
+  float: right;
+  margin-top: -45px;
+  margin-right: @padding-med;
+  font-size: 0.875em;
+  ul{
+    li{
+      position: relative;
+      display: inline;
+      padding: @padding-xsm @padding-sm;
+      &.active{
+        font-family: 'Roboto-bold', helvetica, sans-serif;
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 5px;
+          background-color: @localmenu-selected;
+        }
+      }
+    }
+  }
+}
+
 
 footer{
   position: fixed;
@@ -598,7 +672,9 @@ footer{
 .mobile{
   display: none;
 }
-
+.description{
+  margin: 0 0 0 @padding-med;
+}
 
 // Datepicker overwrites
 .datepicker, .datepicker td{
@@ -680,6 +756,7 @@ footer{
   }
 }
 
+
 #profileForm{
   .gender {
     .radiolabel{
@@ -696,7 +773,22 @@ footer{
     }
   }
 }
-
+form[name=investmentType]{
+  margin-bottom: @padding-med;
+}
+#rateofReturnDateRangeForm{
+  margin: @padding-lg 0 0 @padding-xsm;
+  label{
+    margin: 10px;
+    float: left;
+    width: inherit;
+  }
+  .inputWrapper{
+    input{
+      margin-top: 0;
+    }
+  }
+}
 
 
 // --- MOBILE 
