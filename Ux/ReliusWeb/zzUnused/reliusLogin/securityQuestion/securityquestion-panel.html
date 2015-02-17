@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card-header row">
+    <a href='/testApp/#/login/'>Back</a>
+    <span class='pull-right language-selection' ng-show='hasLanguageSelection'>
+      <a href='' ng-class='{selected: selectedLanguage == "english"}'>English</a>
+        &nbsp; / &nbsp;
+      <a href='' ng-class='{selected: selectedLanguage == "spanish"}'>Spanish</a>
+    </span>
+  </div>
+
+  <div class="card-body">
+    <h2 class='text-center'>{{ greeting }}</h2>
+    <form name='newuserForm' novalidate ng-submit='submit()'>
+      <!-- New User / Login  -->
+      <div class='form-group'>
+        <input type='password' class='form-control input-lg' name='password' autofocus required/>
+      </div>
+    </form>
+  </div>
+</div>

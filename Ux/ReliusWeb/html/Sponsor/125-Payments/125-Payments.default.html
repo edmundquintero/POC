@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+        <div class='row'>
+            <form id='benefitsForm' name=''>
+                <div class='row'>
+                    <div class='col-sm-2'>
+                        <h2>Benefits</h2>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label class='select-label'>
+                            <select class=''>
+                                <option value='lastname'>Last Name</option>
+                                <option value='firstname'>First Name</option>
+                            </select>
+                        </label>
+                        <div class='inputWrapper'>
+                            <span class=''>Sort Results By</span>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label class='select-label'>
+                            <select class=''>
+                                <option value='choicehealth'>Choice Health</option>
+                                <option value='somethingelse'>Something Else</option>
+                            </select>
+                        </label>
+                        <div class='inputWrapper'>
+                            <span class=''>Select Benefit</span>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='form-controls'>
+                            <div class='row'>
+                                <a class='button submit' href=''>GET RESULTS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!--<hr />
+            <nav id='local' class='tabbed'>
+                <ul>
+                    <li>Benefits</li>
+                    <li class='active'>Payments</li>
+                    <li>Claims</li>
+                </ul>
+            </nav>-->
+        </div>
+
+        <div class="row">
+            <form id="paymentsForm">
+                <div class='row radio-group gender'>
+                    <div class="col-sm-4 right-border">
+                        <div class="row">
+                            <label class='col-sm-2 col-sm-offset-3'>
+                                <span class='face-off'></span>
+                                <input type="radio" name="FilterCriteria" value="MonthYear">
+                                <span class='face-on'>
+                                    <svg version="1.1" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve" preserveAspectRatio="xMinYMin meet" width="23px" height="23px" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                    <path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M223.9,329.7c-2.4,2.4-5.8,4.4-8.8,4.4s-6.4-2.1-8.9-4.5l-56-56l17.8-17.8l47.2,47.2l124.8-125.7l17.5,18.1L223.9,329.7z" />
+                                      </g>
+                                    </svg>
+                                </span>
+                                <span class='radiolabel'>Month / Year</span>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <select>
+                                    <option value='All'>All Months</option>
+                                    <option value='Jan'>Jan</option>
+                                    <option value='Feb'>Feb</option>
+                                    <option value='Mar'>Mar</option>
+                                    <option value='Apr'>Apr</option>
+                                    <option value='May'>May</option>
+                                    <option value='Jun'>Jun</option>
+                                    <option value='Jul'>Jul</option>
+                                    <option value='Aug'>Aug</option>
+                                    <option value='Sep'>Sep</option>
+                                    <option value='Oct'>Oct</option>
+                                    <option value='Nov'>Nov</option>
+                                    <option value='Dec'>Dec</option>
+                                </select>
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class='col-sm-5'>
+                                <select>
+                                    <option value='2014'>2014</option>
+                                    <option value='2013'>2013</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 right-border">
+                        <div class="row">
+                            <label class='col-sm-6 col-sm-offset-3'>
+                                <span class='face-off'></span>
+                                <input type="radio" name="FilterCriteria" value="DateRange">
+                                <span class='face-on'>
+                                    <svg version="1.1" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve" preserveAspectRatio="xMinYMin meet" width="23px" height="23px" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                    <path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M223.9,329.7c-2.4,2.4-5.8,4.4-8.8,4.4s-6.4-2.1-8.9-4.5l-56-56l17.8-17.8l47.2,47.2l124.8-125.7l17.5,18.1L223.9,329.7z" />
+                                  </g>
+                                </svg>
+                                </span>
+                                <span class='radiolabel'>Date Range</span>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class='col-sm-5 inputWrapper'>
+                                <input id="startDate" type='text' class='datepicker' />
+                                <span>* Enter Start Date</span>
+                            </div>
+                            <div class='col-sm-5 inputWrapper'>
+                                <input id="endDate" type='text' class='datepicker' />
+                                <span>* Enter End Date</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label class='col-sm-6 col-sm-offset-3'>
+                            <span class='face-off'></span>
+                            <input type="radio" name="FilterCriteria" value="All Dates">
+                            <span class='face-on'>
+                                <svg version="1.1" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve" preserveAspectRatio="xMinYMin meet" width="23px" height="23px" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                <path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M223.9,329.7c-2.4,2.4-5.8,4.4-8.8,4.4s-6.4-2.1-8.9-4.5l-56-56l17.8-17.8l47.2,47.2l124.8-125.7l17.5,18.1L223.9,329.7z" />
+                                  </g>
+                                </svg>
+                            </span>
+                            <span class='radiolabel'>All Dates</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class='col-sm-2'>
+                        <label class='select-label plan-select'>
+                            <select>
+                                <option value='All'>All Payments</option>
+                                <option value='All1'>All1 Payments</option>
+                            </select>
+                        </label>
+                        <div class="inputWrapper">
+                            <span>Payment Type</span>
+                        </div>
+                    </div>
+                    <div class='col-sm-8'>
+                        <div class='inputWrapper full'>
+                            <input type='text' name='' placeholder="Search for SSN#">
+                        </div>
+                    </div>
+                    <div class='col-sm-2'>
+                        <div class='form-controls'>
+                            <div class='row'>
+                                <a class='button submit' href=''>GET RESULTS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <table id='categoryHistory' class='table table-condensed table-responsive'>
+                <thead>
+                    <tr>
+                        <th class='col-sm-2'>Payment Date</th>
+                        <th class='col-sm-2'>Payment Amount</th>
+                        <th class='col-sm-2'>Payment Type</th>
+                        <th class='col-sm-2'>Check/ACH Number</th>
+                        <th class='col-sm-2'>Payee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">XX/XX/XXXX</td>
+                        <td>$60.00</td>
+                        <td class="text-left">Check</td>
+                        <td class="text-left">7236</td>
+                        <td class="text-left">John Johnson</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">XX/XX/XXXX</td>
+                        <td>$39.00</td>
+                        <td class="text-left">Direct Deposit</td>
+                        <td class="text-left">30</td>
+                        <td class="text-left">Bob Banks</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">XX/XX/XXXX</td>
+                        <td>$33.00</td>
+                        <td class="text-left">Direct Deposit</td>
+                        <td class="text-left">31</td>
+                        <td class="text-left">David Davidson</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">XX/XX/XXXX</td>
+                        <td>$33.50</td>
+                        <td class="text-left">Check</td>
+                        <td class="text-left">7729</td>
+                        <td class="text-left">Shirley Carlton</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">XX/XX/XXXX</td>
+                        <td>$67.00</td>
+                        <td class="text-left">Direct Deposit</td>
+                        <td class="text-left">29</td>
+                        <td class="text-left">Alan Anderson</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">XX/XX/XXXX</td>
+                        <td>$30.00</td>
+                        <td class="text-left">Check</td>
+                        <td class="text-left">7231</td>
+                        <td class="text-left">Mary Marks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> <!-- end row -->
+</body>
+</html>

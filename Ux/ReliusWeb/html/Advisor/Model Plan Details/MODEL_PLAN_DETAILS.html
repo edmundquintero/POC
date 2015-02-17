@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+    <style>
+        .pagetxtbox
+        {
+            width:50px;height:40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+    
+        <div class="row"><hr /></div>                
+        <div class="row">
+            <a href="">< Return to Model Realign</a>
+        </div>
+        <div class="row"></div>                
+        
+        <div class="row">
+            <div class="row">                
+                <div class="col-md-10 bottomsm">Plan Details:<span class="h3 sidessm">ABC Demo 401(k) plan</span></div>                
+            </div>
+            <div class="row">
+                <div class="col-md-10 bottomsm">Balance:<span class="h3 sidessm">$742,231,890.00</span></div>                
+            </div>
+            <div class="row">
+                <div class="col-md-10 bottomsm">Participants:<span class="h3 sidessm">11</span></div>                
+            </div>
+        </div>
+
+        <div class='row'>            
+            <table id='investmentModel' class='table table-condensed table-responsive'>
+                    <thead>
+                        <tr>
+                            <th class="col-md-6">Investment</th>
+                            <th class="col-md-3 text-center">Balance</th>
+                            <th class="col-md-3  text-center">Current Allocation Percentage</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>25.00%</td>                            
+                        </tr>
+                        <tr>
+                            <td class="text-left">Artisian small cap value</td>
+                            <td>$166,992.12</td>
+                            <td>25.00%</td>                            
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangaurd 500 Index</td>
+                            <td>$6,992.12%</td>
+                            <td>0.00%</td>                                       
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangaurd Prime Cap</td>
+                            <td>$992.12</td>
+                            <td>0.00%</td>                            
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangaurd Total Bond</td>
+                            <td>$280,992.12</td>
+                            <td>50.00%</td>                            
+                        </tr>
+                        <tr class="row-total">
+                            <td class="text-left">Total</td>
+                            <td>$742,992.12</td>
+                            <td>100.00%</td>                            
+                        </tr>
+                    </tbody>
+                </table>            
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-6">
+                    <form name="page">
+                        <span><<</span>
+                        <span class="leftmed"><</span>
+                        <span class="leftmed">Page 1 of 1</span>
+                        <span class="leftmed">></span>
+                        <span class="leftmed">>></span>
+                        <span class="leftmed">Go To Page</span>
+                        <span class="leftxsm"><input type="text" name="pageno" class="pagetxtbox"/></span>
+                        <span class="leftxsm"><a href="jascript:void(0)" class='button'>GO</a></span>
+                    </form>
+                </div>
+                <div class="col-md-3">&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="row">&nbsp;</div>        
+    </div> <!-- end row -->
+
+</body>
+</html>

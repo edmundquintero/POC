@@ -1,0 +1,18 @@
+<div ng-controller='Investment_RateCtrl'>
+  <header class='card-header'>
+    <div class='title'>{{ investmentRate.title }}</div>
+  </header>
+  <hr />
+  <div class='card-content'>
+    <div class='table-wrapper'>
+      <div ng-repeat='row in investmentRate.rows'>
+        ID: Not in API <br>
+        AVG Deferal Rate: {{ row.AveragePreTaxDeferralRate |percentage }} <br>
+        AVG Roth Rate {{ row.AverageRothDeferralRate |percentage }} <br>
+        AVG Post-Tax Rate {{ row.AveragePostTaxContribRate |percentage }} <br>
+        <hr>
+      </div>
+      <!-- {{ investmentRate.rows }} -->
+    </div>
+  </div>
+</div>

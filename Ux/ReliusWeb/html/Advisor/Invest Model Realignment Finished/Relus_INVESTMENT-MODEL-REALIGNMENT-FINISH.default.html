@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <h2>Investment Model Realignment - Request Processed</h2>
+            </div>
+        </div>
+        <div class='row'>
+            <form name='planSelect'>
+                <div class='col-sm-2'>
+                    <label class='select-label plan-select'>
+                        <select>
+                            <option value=''>Last Name</option>
+                            <option value=''>Option 2</option>
+                        </select>
+                    </label>
+                    <div class='inputWrapper'>
+                        <span> Sort Results By</span>
+                    </div>
+                </div>
+                <div class='col-sm-2'>
+                    <label class='select-label plan-select'>
+                        <select>
+                            <option value=''>ABC Demo 401(k) Plan</option>
+                            <option value=''>Option 2</option>
+                        </select>
+                    </label>
+                    <input type='submit' value='submit' class='hidden'>
+                </div>
+                <div class='col-sm-6'>
+                    <input type='text' name='' value='Search Here' />
+                </div>
+                <div class="col-sm-2">
+                    <input type="submit" value="GET RESULTS" class="button submit" />
+                </div>
+            </form>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-sm-12 text-center h3">
+                <strong>Investment Model Realignment</strong>
+            </div>
+            <div class="col-sm-12 text-center h4">
+                Request Details
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p>Your request has been processed. Realign allocation or balance requests, if submitted, have been posted to the server for batch processing.<br />Your confirmation number is below. You may use this number to reference this transaction in the future.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center h3">
+                <strong>Confirmation Number: XXXX-XXXXXX-XX</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                &nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="" class="button submit"> &nbsp; RETURN &nbsp; </a>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row">
+            <table id='categoryHistory' class='table table-condensed table-responsive'>
+                <thead>
+                    <tr>
+                        <th class='col-sm-2'>Investment</th>
+                        <th>Balance</th>
+                        <th class='col-sm-2'>Units</th>
+                        <th>Value</th>
+                        <th>Cur. Allocation %</th>
+                        <th>Act. Allocation %</th>
+                        <th>Deviation</th>
+                        <th>New Allocation %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>American Funds Growth</td>
+                        <td>$66992.21</td>
+                        <td>1,473.650000</td>
+                        <td>$45.56</td>
+                        <td>25.00%</td>
+                        <td>9.02%</td>
+                        <td>-15.98%</td>
+                        <td>25.00%</td>
+                    </tr>
+                    <tr>
+                        <td>Artisan Small Cap Value</td>
+                        <td>$121,111.98</td>
+                        <td>4,285.633000</td>
+                        <td>$28.26</td>
+                        <td>25.00%</td>
+                        <td>16.32%</td>
+                        <td>-8.68%</td>
+                        <td>25.00%</td>
+                    </tr>
+                    <tr>
+                        <td>Vangard 500 Index Inc</td>
+                        <td>$167,964.45</td>
+                        <td>929.161000</td>
+                        <td>$180.77</td>
+                        <td>50.00%</td>
+                        <td>22.63%</td>
+                        <td>-27.37%</td>
+                        <td>25.00%</td>
+                    </tr>
+                    <tr>
+                        <td>Vanguard Primecap</td>
+                        <td>$270,603.47</td>
+                        <td>4,665.577000</td>
+                        <td>$58.00</td>
+                        <td>0.00%</td>
+                        <td>36.45%</td>
+                        <td>36.45%</td>
+                        <td>20.00%</td>
+                    </tr>
+                    <tr>
+                        <td>Vanguard Total Bond</td>
+                        <td>$115,654.27</td>
+                        <td>10,447.540000</td>
+                        <td>$11.07</td>
+                        <td>0.00%</td>
+                        <td>15.58%</td>
+                        <td>15.58%</td>
+                        <td>5.00%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="text-right"><strong>Total Allocation Percent</strong></td>
+                        <td class="text-right"><strong>$742,326.29</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right"><strong>100%</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class='col-sm-5'>
+                Realign employee allocations within the model: <strong>Yes</strong>
+            </div>
+            <div class='col-sm-7'>
+                Realign employee balances within the model: <strong>Yes</strong>
+            </div>
+        </div>
+
+    </div> <!-- End Page -->
+</body>
+</html>

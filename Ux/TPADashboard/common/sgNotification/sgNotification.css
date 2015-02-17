@@ -1,0 +1,54 @@
+div[notification] {
+  max-height: 0px;
+  position: absolute;
+  width: 100%;
+  background-color: #666;
+  background-color: rgba(71, 85, 91, 0.8);
+  z-index: 10;
+}
+div[notification] .notification {
+  background: transparent;
+  padding: 25px 0px;
+  font-size: 16px;
+}
+div[notification] .notification.notification-error { color: red; }
+div[notification] .notification.notification-warning { color: yellow;}
+div[notification] .notification.notification-success { color: #99EE99;}
+div[notification] .notification button {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  box-shadow: none;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #FFF;
+  text-shadow: 0 1px 0 #000;
+  z-index: 15;
+}
+div[notification],
+.notification.ng-enter,
+.notification.ng-move,
+.notification.ng-leave {
+  -webkit-transition:0.3s linear all;
+  -moz-transition:0.3s linear all;
+  -o-transition:0.3s linear all;
+  transition:0.3s linear all;
+}
+.notification.ng-enter,
+.notification.ng-move {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.notification.ng-enter.ng-enter-active,
+.notification.ng-move.ng-move-active {
+  opacity: 1;
+}
+.notification.ng-leave.ng-leave-active {
+  opacity: 0;
+}

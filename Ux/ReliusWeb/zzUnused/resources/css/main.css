@@ -1,0 +1,363 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Light.ttf');
+}
+
+/* Global */
+a {
+  color: #FFF;
+}
+a:hover {
+  text-decoration: none;
+  color: #CCC;
+}
+
+/* Bootstrap Overwrites */
+.navbar-inverse,
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  background: #000;
+  background-color: #000;
+  background-image: none;
+  border-radius: 0;
+}
+.input-lg,
+.form-horizontal .form-group-lg .form-control {
+  box-shadow: none;
+  border-radius: 0px;
+  font-size: 22px;
+}
+body {
+  color: #FFF;
+  background: url('../images/background1.jpg') #000 no-repeat;
+  background-size: cover;
+  font-family: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+}
+#page {
+  min-height: 100%;
+  height: auto;
+  height: 100%;
+}
+
+/* OO class based CSS */
+
+.white { color: #FFF; }
+.black { color: #000; }
+.yellow { color: #FAD53E; }
+.backwhite { background-color: #FFF; }
+.backblack { background-color: #000; }
+.inline-block { display: inline-block; }
+
+/* Buttons */
+
+.btn {
+  width: 125px;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #586C71;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  border-radius: 3px;
+}
+.btn-primary, .btn-primary:active, .btn-primary:hover, .btn-primary:focus{
+  background-color: #FFF;
+  color: #5498C8;
+}
+.btn-primary:hover{
+  box-shadow: inset 1px 1px 1px 0px #AAA;
+}
+.btn-primary.disabled {
+  background-color: #E6E6E6;
+  color: #5498C8;
+  border: none;
+}
+.btn-transparent {
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+}
+.btn-transparent:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ribbon */
+
+#ribbon {
+  background-color: #000;
+  color: #fff;
+  height: 100px;
+  padding: 20px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+#ribbon .companytitle {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 30px;
+}
+/* Recomend logos height 100px and width 200px */
+#ribbon .image {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+/*  width: 180px;
+  height: 80px;*/
+  position: absolute;
+  top: 10px;
+}
+#ribbon .leftimage {
+/*  background: url('../images/logo.png') #666 no-repeat;
+  background-size: 180px 80px;
+  background-position: left center;*/
+  left: 10px;
+}
+#globalNavPusher {
+  height: 50px;
+  width: 100%;
+}
+
+/* Footer */
+
+#footer {
+  position: absolute;
+  background: transparent;
+  height: 50px;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+#footer.fixedBottom {
+  position: fixed;
+  bottom: 0;
+}
+#footernav a {
+  background: transparent;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#footernav ul {
+  background: rgba(0,0,0,0.8);
+  border-radius: 0px;
+  padding: 5px;
+}
+#footernav ul li {
+  padding: 10px;
+}
+#footernav ul li a {
+  color: #F6BE1A;
+  font-size: 16px;
+}
+
+/* Common card styles */
+
+.card {
+  background: -moz-linear-gradient(top, rgba(55, 71, 79, 0.8) 0%, rgba(33, 33, 33, 0.8) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(55, 71, 79, 0.8)), color-stop(100%, rgba(33, 33, 33, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(55, 71, 79, 0.8) 0%, rgba(33, 33, 33, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(55, 71, 79, 0.8) 0%, rgba(33, 33, 33, 0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(55, 71, 79, 0.8) 0%, rgba(33, 33, 33, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(55, 71, 79, 0.8) 0%, rgba(33, 33, 33, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc37474f', endColorstr='#cc212121', GradientType=0);
+  box-shadow: none;
+  z-index: 5;
+}
+/* 3D flip animation for cards */
+.flip {
+  position: relative;
+  margin-top: 200px;
+  -webkit-perspective: 3000;
+  -ms-perspective: 3000;
+  -moz-perspective: 3000;
+  -o-perspective: 3000;
+}
+.card {
+  position: absolute;
+  width: 400px;
+  min-height: 500px;
+  left: 50%;
+  margin-left: -200px;
+}
+.card.ng-leave,
+.card.ng-enter {
+  backface-visibility: hidden;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transform-origin: center center;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+}
+.card.ng-leave {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.card.ng-leave-active {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.card.ng-enter {
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+.card.ng-enter-active {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.card .container {
+  width: 100%;
+  padding: 15px 30px;
+}
+.card .container .card-header .language-selection {
+  font-size: 14px;
+  color: #B5B5B5;
+}
+.card .container .card-header .language-selection a {
+  color: #B5B5B5;
+  cursor: pointer;
+}
+.card .container .card-header .language-selection a:hover {
+  text-decoration: none;
+}
+.card .container .card-header .language-selection a.selected {
+  color: white;
+  text-decoration: none;
+}
+.card .container .card-body {
+  padding: 0 40px;
+}
+.card .container .card-body > h2 {
+  margin: 25px 0 15px 0;
+  color: #FAD53E;
+}
+.card .container .card-body .form-group label {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 300;
+}
+.card .container .card-body .form-group.submit .btn {
+  margin: 5px 0 10px 0;
+}
+.card .container .card-body .form-group.remember,
+.card .container .card-body .form-group.submit {
+  text-align: center;
+}
+
+/* Login Panel */
+.loginPanel .card-body .form-login input.ng-dirty.ng-invalid,
+.loginPanel .card-body .form-login select {
+  color: red;
+}
+.loginPanel .card-body .form-login.ng-invalid button {
+  background: #FFF;
+  background-image: none;
+}
+.loginPanel .card-body .form-login input,
+.loginPanel .card-body .form-login select {
+  color: #AAAAAA;
+}
+.loginPanel .card-body .form-login .forgot-password {
+  display: inline-block;
+  margin-top: 2px;
+}
+.loginPanel #loginInfoGroup {
+  margin-top: 15px;
+}
+
+/* Notification */
+
+notification {
+  max-height: 0px;
+  position: fixed;
+  width: 100%;
+  top: 100px;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}
+notification .notification {
+  background: transparent;
+  padding: 25px 0px;
+}
+notification .notification.notification-error {
+  color: red;
+}
+notification .notification button {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  box-shadow: none;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #FFF;
+  text-shadow: 0 1px 0 #000;
+  z-index: 15;
+}
+notification,
+.notification.ng-enter,
+.notification.ng-move,
+.notification.ng-leave {
+  -webkit-transition:0.3s linear all;
+  -moz-transition:0.3s linear all;
+  -o-transition:0.3s linear all;
+  transition:0.3s linear all;
+}
+.notification.ng-enter,
+.notification.ng-move {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.notification.ng-enter.ng-enter-active,
+.notification.ng-move.ng-move-active {
+  opacity: 1;
+}
+.notification.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* Modal */
+.modal-backdrop.in {
+  opacity: 0.6;
+}
+.modal-dialog {
+  margin: 200px auto;
+}
+.modal-content {
+  background: -moz-linear-gradient(top, rgba(55, 71, 79, 1) 0%, rgba(33, 33, 33, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(55, 71, 79, 1)), color-stop(100%, rgba(33, 33, 33, 1)));
+  background: -webkit-linear-gradient(top, rgba(55, 71, 79, 1) 0%, rgba(33, 33, 33, 1) 100%);
+  background: -o-linear-gradient(top, rgba(55, 71, 79, 1) 0%, rgba(33, 33, 33, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(55, 71, 79, 1) 0%, rgba(33, 33, 33, 1) 100%);
+  background: linear-gradient(to bottom, rgba(55, 71, 79, 1) 0%, rgba(33, 33, 33, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc37474f', endColorstr='#cc212121', GradientType=0);
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.modal-header {
+  padding: 20px;
+  border-bottom: none;
+}
+.modal-header .modal-title {
+  color: #FAD53E;
+  font-weight: bold;
+}
+.modal-body {
+  padding: 30px;
+}
+.modal-footer {
+  padding: 20px;
+  border-top: none;
+}

@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>    
+    <script language="javascript">
+
+(function($){
+    'use strict';
+        $(document).ready(function (){            
+            HideInvestmentData();
+            RegisterClickEvent();
+        });
+
+        function ShowHideInvestmentData(currentInvID)
+        {            
+            if ($("#" + currentInvID).is(".circle_plus")) {
+                HideInvestmentData();
+                ExpandInvestmentData(currentInvID);                
+            }
+            else
+            {
+                HideInvestmentData();
+            }            
+        }
+
+        function ExpandInvestmentData(currentInvID)
+        {
+            $("#Tbl_Child_" + currentInvID).css("display", "");
+            $("#" + currentInvID).removeClass("circle_plus");
+            $("#" + currentInvID).addClass("circle_minus");
+        }
+
+        function RegisterClickEvent() {
+            $('.maintbl').on('click', function () {
+                ShowHideInvestmentData(this.id);
+            });
+        }
+
+        function HideInvestmentData() {
+            $(".innertblchild").css("display", "none");
+            $(".maintbl").removeClass("circle_minus");
+            $(".maintbl").addClass("circle_plus");            
+        }
+        
+})(jQuery);
+
+    </script>
+
+
+    <style>
+         .pagetxtbox
+        {
+            width:50px;height:40px;
+        }
+        .table-rownocolor tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .table-rownocolor tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .table-outerborder > tbody > tr > td {
+            border: 0px;
+        }
+
+        .table-outerborder > tbody > tr > td:first-child {
+            border-left: 1px solid #cccccc;
+        }
+
+        .table-outerborder > tbody > tr > td:last-child {
+            border-right: 1px solid #cccccc;
+        }
+
+
+         .table-bordertopandbottom > tbody > tr > td {
+                border-top: 1px solid #cccccc;
+                border-bottom: 1px solid #cccccc;
+                border-left:0px solid #cccccc;;
+                border-right:0px solid #cccccc;;
+         }
+
+        .table-bordertopandbottom > tbody > tr > td:last-child {
+                border-right: 1px solid #cccccc;
+          }
+
+        .table-child {
+            margin: 0px;
+        }
+
+        .table-child thead {          
+          color: #fad53e;
+          font-size: 0.875em;          
+          border:0px;
+        }
+        
+        .table-child thead tr th {          
+          border-right: 1px solid #cccccc;
+        }
+        .table-child thead tr:first-child {
+          border-top: 1px solid #cccccc;
+        }
+        .table-child thead tr th:last-child {
+          border: none;
+        }
+
+        .table-child tbody tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .table-child tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .table-child tbody tr td {
+            padding: 5px;
+            border-left: 1px solid #cccccc;
+            border-right: 1px solid #cccccc;
+        }
+
+        .table-child > tbody > tr > td:first-child {
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        .table-child > tbody > tr > td:last-child {
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        .table-child > tbody > tr:first-child {
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .table-child > tbody > tr:last-child {
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+    
+        <div class="row"><hr /></div>                        
+        <div class="row">
+            <a href="">< Return to Plan Balances</a>
+        </div>               
+        <div class="row"></div>
+        <div class="row">
+            <div class="row">
+                <div class="col-md-10 bottomsm">Plan Details:<span class="h3 sidessm">ABC Demo 401(k) plan</span>
+                    <span class="leftlg">Model:</span><span class="h3 sidessm">Conservative</span>
+                </div>
+            </div>            
+        </div>                
+        <div class="row">
+            <table id='ParticipantDetails' class='table table-condensed table-bordertopandbottom table-responsive table-rownocolor'>
+                <thead>
+                    <tr>
+                        <th class="col-sm-2">Social Security Number</th>
+                        <th class="col-sm-3">Name</th>
+                        <th class="col-sm-4">Plan</th>
+                        <th class="text-center">Ending Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_plus icon maintbl" id="Inv_1" style="cursor:pointer"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy1</td>
+                        <td class="text-left">ABC Demo 401(k) Plan</td>
+                        <td>$270,603.47</td>
+                    </tr>
+                    <tr id="Tbl_Child_Inv_1" class="innertblchild" >
+                        <td colspan="4" style="padding:0px">
+                            <table class='table table-child table-condensed table-responsive'>
+                                <thead>
+                                    <tr>
+                                        <th class="col-sm-6 leftlg">Fund Name</th>
+                                        <th class="col-sm-2">Ending Balance</th>
+                                        <th class="col-sm-2">Units</th>
+                                        <th class="col-sm-2">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left leftlg">American Funds Growth Fund of America</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Artisan Small Cap Value</td>
+                                        <td>$39,147.41</td>
+                                        <td>1,333.2140000</td>
+                                        <td>28.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd 500 Index Investor</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd Primecap</td>
+                                        <td>$39,147.41</td>
+                                        <td>1,333.2140000</td>
+                                        <td>28.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd Total Bond Mkt Index</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_plus icon maintbl" id="Inv_2" style="cursor:pointer" onclick="ExpandInvestmentData(this)"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy2</td>
+                        <td class="text-left">ABC1 Demo 401(k) Plan</td>
+                        <td>$70,603.40</td>
+                    </tr>
+                    <tr id="Tbl_Child_Inv_2" class="innertblchild" >
+                        
+                        <td colspan="4" style="padding:0px">
+                            <table class='table table-child table-condensed table-responsive'>
+                                <thead>
+                                    <tr>
+                                        <th class="col-sm-6 leftlg">Fund Name</th>
+                                        <th class="col-sm-2">Ending Balance</th>
+                                        <th class="col-sm-2">Units</th>
+                                        <th class="col-sm-2">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left leftlg">American Funds Growth Fund of America</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Artisan Small Cap Value</td>
+                                        <td>$39,147.41</td>
+                                        <td>1,333.2140000</td>
+                                        <td>28.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd 500 Index Investor</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd Primecap</td>
+                                        <td>$39,147.41</td>
+                                        <td>1,333.2140000</td>
+                                        <td>28.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd Total Bond Mkt Index</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_minus icon" id="Inv_3"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy3</td>
+                        <td class="text-left">ABC2 Demo 401(k) Plan</td>
+                        <td>$603.37</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_plus icon maintbl" id="Inv_4" style="cursor:pointer" onclick="ExpandInvestmentData(this)"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy4</td>
+                        <td class="text-left">ABC3 Demo 401(k) Plan</td>
+                        <td>$270.603.47</td>
+                    </tr>
+                    <tr id="Tbl_Child_Inv_4" class="innertblchild">
+                        <td colspan="4" style="padding:0px">
+                            <table class='table table-child table-condensed table-responsive'>
+                                <thead>
+                                    <tr>
+                                        <th class="col-sm-6 leftlg">Fund Name</th>
+                                        <th class="col-sm-2">Ending Balance</th>
+                                        <th class="col-sm-2">Units</th>
+                                        <th class="col-sm-2">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left leftlg">American Funds Growth Fund of America</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Artisan Small Cap Value</td>
+                                        <td>$39,147.41</td>
+                                        <td>1,333.2140000</td>
+                                        <td>28.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd 500 Index Investor</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd Primecap</td>
+                                        <td>$39,147.41</td>
+                                        <td>1,333.2140000</td>
+                                        <td>28.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Vangaurd Total Bond Mkt Index</td>
+                                        <td>$15,147.41</td>
+                                        <td>333.2140000</td>
+                                        <td>$45.45</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_minus icon" id="Inv_5"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy5</td>
+                        <td class="text-left">ABC4 Demo 401(k) Plan</td>
+                        <td>$200,000.00</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_minus icon" id="Inv_6"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy6</td>
+                        <td class="text-left">ABC5 Demo 401(k) Plan</td>
+                        <td>$500.99</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span class="glyphicons circle_minus icon" id="Inv_7"></span><span class="leftsm">xxxx-xx-1234</span></td>
+                        <td class="text-left">Applebee, Amy7</td>
+                        <td class="text-left">ABC6 Demo 401(k) Plan</td>
+                        <td>$7,603.47</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-6">
+                    <form name="page">
+                        <span><<</span>
+                        <span class="leftmed"><</span>
+                        <span class="leftmed">Page 1 of 1</span>
+                        <span class="leftmed">></span>
+                        <span class="leftmed">>></span>
+                        <span class="leftmed">Go To Page</span>
+                        <span class="leftxsm"><input type="text" name="pageno" class="pagetxtbox" /></span>
+                        <span class="leftxsm"><a href="jascript:void(0)" class='button'>GO</a></span>
+                    </form>
+                </div>
+                <div class="col-md-3">&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="row">&nbsp;</div>  
+    </div> <!-- end row -->
+
+</body>
+</html>

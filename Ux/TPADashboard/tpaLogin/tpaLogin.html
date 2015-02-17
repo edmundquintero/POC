@@ -1,0 +1,25 @@
+<header>
+  <div ribbon></div>
+</header>
+
+<div id='main'>
+
+  <!-- User Notifications -->
+  <div notification></div>
+
+  <div class='container'>
+    <div class='card-spacer hidden-xs'></div>
+    <div class='row'>
+      <div class='col-sm-4 col-sm-offset-4'>
+        <div class='flip row'>
+          <div class='card {{ pageClass }} col-sm-12' ui-view='card'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- End Main -->
+
+<footer id='footer' role='contentinfo' class='fixedBottom'>
+  <div sgFooter copywright='"2014 SunGard All Rights Reserved"'></div>
+</footer>

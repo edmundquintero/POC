@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="testApp"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" ng-app="testApp"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="testApp"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js" ng-app="testApp">  -->
+<!--<![endif]-->
+<html class="no-js" ng-app="testApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Relius {{ pageTitle }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="resources/css/vendor/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="resources/css/main.css">
+    <script src="vendor/modernizr-2.6.2.min.js"></script>
+    <base href="/testApp/index.html">
+  </head>
+  <body>
+
+  <!-- Warning for IE versions less than 7 -->
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+  <div id='page' ui-view='page'> </div>
+
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-animate.min.js"></script>
+    <!-- <script src="vendor/angular-route.min.js"></script> -->
+    <script src="vendor/angular-ui-router.min.js"></script>
+
+    <script src="vendor/jquery-1.10.2.min.js"></script>
+    <script src="vendor/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="vendor/plugins.js"></script>
+
+    <script src="app.js"></script>
+    <script src="common/common.js"></script>
+    <script src="reliusLogin/reliusLogin.js"></script>
+
+    <script src="reliusLogin/ribbon/ribbon.js"></script>
+    <script src="reliusLogin/footer/footer.js"></script>
+    <script src="reliusLogin/login/login.js"></script>
+    <script src="reliusLogin/newUser/newUser.js"></script>
+    <script src="reliusLogin/forgotPassword/forgotPassword.js"></script>
+    <script src="common/notification/notification.js"></script>
+
+  </body>
+</html>

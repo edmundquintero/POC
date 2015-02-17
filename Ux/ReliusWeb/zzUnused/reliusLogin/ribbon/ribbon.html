@@ -1,0 +1,11 @@
+<nav class='navbar navbar-inverse navbar-{{ position }}-top' role='navigation' id='ribbon'>
+<!-- Global Ribbon -->
+  <div class='container-fluid'>
+
+    <a ng-href='{{ logo.link }}' title='{{ logo.title }}' class='image leftimage'></a>
+    <img class='image leftimage' src='resources/images/logo.png' >
+    <a ng-href="{{ company.link }}" title='{{ company.title }}' class='companytitle' ng-show='company.title'>{{ company.title }}</a>
+    <!-- HTML inside the ribbon tag -->
+    <div ng-transclude></div>
+  </div>
+</nav>

@@ -1,0 +1,60 @@
+<!-- Form control top row -->
+<div class="container">
+  <div class='card-header row'>
+    <div class="new-user pull-left">
+      <a class="white" href='/testApp/#/login/newuser'>New User</a>
+    </div>
+    <div class="pull-right language-selection" ng-show='hasLanguageSelection'>
+      <!-- Visual toggle here -->
+      <span>
+        <a ng-class='{selected: selectedLanguage == "english"}'>English</a>
+          &nbsp; / &nbsp;
+        <a ng-class='{selected: selectedLanguage == "spanish"}'>Spanish</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <h2 class='text-center' ng-show='greeting'>{{ greeting }}</h2>
+    <form name='loginForm' class='form form-login' novalidate ng-submit='loginForm.$valid && submit()'>
+      <!-- Username -->
+      <div class='form-group username'>
+        <input class='form-control input-lg' type='text' name='username' ng-model='user.name' autofocus required/>
+        <label for='usernameInput'>{{ usernameLabel }}<span ng-show='loginForm.username.$error.required'> *</span></label>
+      </div>
+
+      <!-- Password -->
+      <div class='form-group password'>
+        <input class='form-control input-lg' type='password' name='password' ng-model='user.password' required/>
+        <label for='passwordInput'>{{ passwordLabel }}<span ng-show='loginForm.password.$error.required'> *</span></label>
+        <!-- Forgot Password -->
+        <label class='pull-right' ng-show='forgotPassword'> <!-- Only show if forgotPassowrd is true-->
+          <a href='/testApp/#/login/forgot' class="forgot-password yellow">{{ forgotPassword }}</a>
+        </label>
+      </div>
+
+      <!-- Select Role -->
+      <div class='form-group role' ng-show='roleLabel && roles'>
+        <select name='userGroup' class='form-control input-lg' ng-model='selectedRole' ng-options="role.name for role in roles track by role.value" required>
+          <option value='' disabled selected>{{ roleLabel }}</option>
+        </select>
+      </div>
+
+      <!-- Remember Username -->
+      <div class='form-group remember'>
+        <label>
+          <input type='checkbox' name='rememberMe'/> &nbsp; Remember me on this computer
+        </label>
+      </div>
+
+      <!-- Login Button -->
+      <div class='form-group submit'>
+        <button type='submit' value='Login' class='btn btn-primary btn-lg' ng-class='{disabled: !loginForm.$valid}'>Login</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card-footer">
+    <p class="text-center">By entering this site you are agreeing to the <br><a href="{{ loginInfoLink }}" class="yellow">Terms and Conditions</a> stated herein. This text is <br>managed via "Custom Text."</p>
+  </div>
+</div>

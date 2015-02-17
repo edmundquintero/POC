@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+        <div class='row'>
+            <h2>Plan Selection</h2>
+            <hr />
+        </div>
+
+        <nav id='local' class='tabbed'>
+            <ul>
+                <li class='active'>Plan View</li>
+                <li>Employer View</li>
+            </ul>
+        </nav>
+
+        <!-- Search Content -->
+        <div class='row'>
+            <form id='sponsorPlanSelection' name='sponsorPlanSelection'>
+                <div class="row">
+                    <div class='col-md-3'>
+                        <label class='select-label'>
+                            <select>
+                                <option value=''>Employer</option>
+                                <option value=''>Plan Name</option>
+                                <option value=''>PlanID</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class='col-md-7'>
+                        <div class='inputWrapper full'>
+                            <input type='text' name='Plan' placeholder="Type in a name of plan here">
+                        </div>
+                    </div>
+                    <div class='col-sm-2'>
+                        <div class='form-controls'>
+                            <div class="row">
+                                <a class='button submit sideslg' href=''>Refresh</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div> <!-- Search Content end row -->
+        <!--Page Content-->
+        <div class='row'>
+
+            <table id='rateOfReturnTable' class='table table-condensed table-responsive'>
+                <thead>
+                    <tr>
+                        <th class="col-xs-4">Employer</th>
+                        <th class="col-xs-4">Plan Name</th>
+                        <th class="col-xs-2"> Plan ID</th>
+                        <th class="col-xs-2">Plan Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <span class="pull-left">ABC Duplicate Sources Employer</span></td>
+                        <td><span class="pull-left">ABC Demo 401(k) Plan</span></td>
+                        <td><span class="pull-left">1250k</span></td>
+                        <td><span class="pull-left">$234,124.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="pull-left">ABC, INC</span></td>
+                        <td><span class="pull-left">ABC Electronic Company</span></td>
+                        <td><span class="pull-left">ABC</span></td>
+                        <td><span class="pull-left">$52,234,114.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="pull-left">Church Group Stores</span></td>
+                        <td><span class="pull-left">ADA Home Health Care</span></td>
+                        <td><span class="pull-left">Catholic</span></td>
+                        <td><span class="pull-left">$152,234,124.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="pull-left">Employe 1</span></td>
+                        <td><span class="pull-left">Test Plan 123</span></td>
+                        <td><span class="pull-left">PLAN1</span></td>
+                        <td><span class="pull-left">$52,234,124.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="pull-left">Employer 2</span></td>
+                        <td><span class="pull-left">Test Plan 123456</span></td>
+                        <td><span class="pull-left">PLAN2</span></td>
+                        <td><span class="pull-left">$152,234,124.00</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div> <!-- Page Content end row -->
+        <!--Bottom Content-->
+        <div class="row">
+
+            <div>
+                <strong>
+                    A note about security:
+                </strong>
+            </div>
+            <div>
+                <small>
+                    Please be aware of the security risks of saving information to your harddrive of printing sensitive information. Security
+                    precautions are taken with the data displayed on this site, but users have the responsibility of handling information in a
+                    secure way. Please don't forget to logout. Failure to logout could leave your entire plan vulenerable to attack.
+                </small>
+            </div>
+        </div> <!-- Bottom Content end row -->
+    </div><!-- end #page -->
+    <script src="resources/js/vendor/less.min.js" type="text/javascript"></script>
+</body>
+</html>

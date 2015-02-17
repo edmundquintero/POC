@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>       
+    <style>
+        .margintop0px{
+            margin-top:0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+    
+        <div class="row"><hr /></div>  
+                  
+        <div class="row">
+            <a href="">< Return to Model Selection</a>
+        </div>        
+
+        <div class="row"></div>
+
+        <div class="row">
+            <form id='transferType' name='transferType'>
+                <div class="row">
+                    <div class='col-md-3'>
+                        <label class='select-label'>
+                            <select>
+                                <option value=''>Conservative</option>
+                                <option value=''>Moderate</option>
+                                <option value=''>Aggresive</option>
+                            </select>
+                        </label>
+                        <div class='inputWrapper'>
+                            <span class=''>Select Investment Model</span>
+                        </div>
+                    </div>
+                    <div class='form-controls'>
+                        <a href="javascript:void(0)" class="button submit">VIEW</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="row"><hr /></div>  
+        
+        <div class="row">
+            <form name="frmNextSchedule">
+                <div class="row">
+
+                        <div class="col-sm-3">
+                            <input type="text" name="NotSch" value="Not Scheduled" />
+                            <div class='inputWrapper'>
+                                <span class=''>Current recurring realignment settings Realignment frequency</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" name="DayOfRealignment" class="datepicker" />
+                            <div class='inputWrapper'>
+                                <span class=''>Date of Realignment</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" name="StartDate" class="datepicker" />
+                            <div class='inputWrapper'>
+                                <span class=''>Start Date</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" name="NotSch" />
+                            <div class='inputWrapper'>
+                                <span class=''>Next Schedule</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 form-controls">
+                            <a href=" javascript:void(0)" class="button submit">UPDATE</a>
+                        </div>
+                    </div>
+            </form>
+        </div>
+        <div class="row">&nbsp;</div>
+        <form name="modelTransfers" id="modelTransfers">
+            <div class="row">Conservative</div>
+            <div class='row'>
+                <table id='investmentModel' class='table table-condensed table-responsive'>
+                    <thead>
+                        <tr>
+                            <th class="col-md-3">Investment</th>
+                            <th>Balance</th>
+                            <th>Units</th>
+                            <th class="col-md-1">Value</th>
+                            <th class="col-md-1">Curr. Allocation %</th>
+                            <th class="col-md-1">Acct. Allocation %</th>
+                            <th class="col-md-1">Deviation</th>
+                            <th class="col-md-1">New Allocation%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>-15.00</td>
+                            <td class='form-controls'><input type="text" name="inv_to_1" value="0.00" class="margintop0px" /></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>9.02%</td>
+                            <td><input type="text" name="inv_to_1" value="0.00" class="margintop0px" /></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>28.00%</td>
+                            <td><input type="text" name="inv_to_1" value="0.00" class="margintop0px" /></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>28.00%</td>
+                            <td><input type="text" name="inv_to_1" value="0.00" class="margintop0px" /></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>28.00%</td>
+                            <td><input type="text" name="inv_to_1" value="0.00" class="margintop0px" /></td>
+                        </tr>
+                        <tr class="row-total">
+                            <td class="text-left">Total</td>
+                            <td>$742,992.12</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0.00%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-4">
+                            <label>
+                                <span class='face-off' style="left:0px"></span>
+                                <input type="radio" name="allinvestment" value="all">
+                                <span class='face-on' style="left:0px">
+                                    <svg version="1.1" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve" preserveAspectRatio="xMinYMin meet" width="23px" height="23px" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                    <path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M223.9,329.7c-2.4,2.4-5.8,4.4-8.8,4.4s-6.4-2.1-8.9-4.5l-56-56l17.8-17.8l47.2,47.2l124.8-125.7l17.5,18.1L223.9,329.7z" />
+                            </g>
+                         </svg>
+                                </span>
+                                <span class='radiolabel leftmed'>Realign employee allocations within the model</span>
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>
+                                <span class='face-off' style="left:0px"></span>
+                                <input type="radio" name="allinvestment" value="all">
+                                <span class='face-on' style="left:0px">
+                                    <svg version="1.1" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve" preserveAspectRatio="xMinYMin meet" width="23px" height="23px" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                    <path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M223.9,329.7c-2.4,2.4-5.8,4.4-8.8,4.4s-6.4-2.1-8.9-4.5l-56-56l17.8-17.8l47.2,47.2l124.8-125.7l17.5,18.1L223.9,329.7z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class='radiolabel leftmed'>Realign employee balances within the model</span>
+                            </label>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <a href=" javascript:void(0)" class="button submit">RESET</a>
+                            &nbsp;&nbsp;
+                            <a href=" javascript:void(0)" class="button submit">SUBMIT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+        </form>
+     </div> <!-- end row -->
+</body>
+
+</html>

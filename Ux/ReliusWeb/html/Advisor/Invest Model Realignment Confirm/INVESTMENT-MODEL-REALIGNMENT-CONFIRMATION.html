@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+    
+        <div class="row"><hr /></div>                
+        <div class="row"></div>        
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <strong>Investment Model Realignment</strong>
+            </div>
+            <div class="col-sm-12 text-center">
+                <form><span class="disabled">Request Details</span></form>
+            </div>
+            <div class="col-sm-12  text-center">
+                <div class="col-sm-1">&nbsp;</div>
+                <div class="col-sm-10">
+                    <small>
+                        Your request has not been processed yet. Please confirm that information below details properly describe the transaction you are requesting by
+                        selecting 'Continue'. Select 'Cancel' to abort the request.
+                    </small>
+                </div>
+                <div class="col-sm-1">&nbsp;</div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"><hr /></div>                
+        
+        <div class="row">
+            Conservative            
+        </div>
+
+        <div class='row'>            
+            <table id='investmentModel' class='table table-condensed table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>Investment</th>
+                            <th>Balance</th>
+                            <th>Units</th>
+                            <th>Value</th>
+                            <th>Cur. Allocation %</th>
+                            <th>Act. Allocation %</th>
+                            <th>Deviation</th>
+                            <th>New Allocation %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">American Funds Growth Value</td>
+                            <td>$66,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>-15.98%</td>
+                            <td>13.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Artisian small cap value</td>
+                            <td>$166,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>-15.98%</td>
+                            <td>13.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangaurd 500 Index</td>
+                            <td>$6,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>-15.98%</td>
+                            <td>13.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangaurd Prime Cap</td>
+                            <td>$992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>-15.98%</td>
+                            <td>13.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangaurd Total Bond</td>
+                            <td>$280,992.12</td>
+                            <td>1,432.6500000</td>
+                            <td>$45.46</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td>-15.98%</td>
+                            <td>13.00%</td>
+                        </tr>
+                        <tr class="row-total">
+                            <td class="text-left">Total Allocation Percent</td>
+                            <td>$742,992.12</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>100.00%</td>
+                        </tr>
+                    </tbody>
+                </table>            
+        </div>
+
+        <div class="row">
+            <div class="row">
+                    <div class="col-sm-4">
+                        <small>Realign employee allocations within the model:<strong>Yes</strong></small>
+                    </div>
+                    <div class="col-sm-4">
+                        <small>Realign employee balances within the model:<strong>Yes</strong></small>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">&nbsp;</div>
+        <div class="row">  
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <a href="jascript:void(0)" class='button'>CANCEL</a> &nbsp;&nbsp;&nbsp;<a href="jascript:void(0)" class='button submit'>CONTINUE</a>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end row -->
+
+</body>
+</html>

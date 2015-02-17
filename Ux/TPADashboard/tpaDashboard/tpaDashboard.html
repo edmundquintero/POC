@@ -1,0 +1,33 @@
+<header>
+  <div class='mainTitle'>Relius <span>TPA Dashboard</span></div>
+  <div class='welcome'> welcome, {{ userName }}</div>
+
+  <ul class='header-controls'>
+    <!-- <li class='dash-link'>
+      <a href='' ng-click='save()'>
+        <span class="icon" data-icon="&#xe602;"></span>
+        SAVE
+      </a>
+    </li> -->
+    <li class='dash-link' ng-class='{active: headerLink == "dashLink"}'>
+      <a href='#/dash' >
+        <span class='glyphicons white dashboard icon'></span>
+        <span class='icon-label'>Dashboard</span>
+      </a>
+    </li>
+    <li class='settings-link' ng-class='{active: headerLink == "settingsLink"}'>
+      <a href='#/config'>
+        <span class='glyphicons white cogwheel icon'></span>
+        <span class='icon-label'>Settings</span>
+      </a>
+    </li>
+    <li class='logout-link'>
+      <a href='#/logout'>
+        <span class='glyphicons white user icon'></span>
+        <span class='icon-label'>Logout</span>
+      </a>
+    </li>
+  </ul>
+</header>
+<div notification></div>
+<div id='view' ui-view='view'></div>

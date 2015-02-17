@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <h2>Model Funds Transfers</h2>
+            </div>
+        </div>
+        <div class='row'>
+            <form name='planSelect'>
+                <div class='col-sm-3'>
+                    <label class='select-label plan-select'>
+                        <select>
+                            <option value=''>Last Name</option>
+                            <option value=''>Option 2</option>
+                        </select>
+                    </label>
+                    <div class='inputWrapper'>
+                        <span> Sort Results By</span>
+                    </div>
+                </div>
+                <div class='col-sm-2'>
+                    <label class='select-label plan-select'>
+                        <select>
+                            <option value=''>ABC Demo 401(k) Plan</option>
+                            <option value=''>Option 2</option>
+                        </select>
+                    </label>
+                    <input type='submit' value='submit' class='hidden'>
+                </div>
+                <div class='col-sm-5'>
+                    <input type='text' name='' value='Search Here' />
+                </div>
+                <div class="col-sm-2">
+                    <input type="submit" value="GET RESULTS" class="button submit" />
+                </div>
+            </form>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="">< Return to Model Selection</a>
+            </div>
+        </div>
+
+        <div class='row'>
+            <form name='fundSelect'>
+                <div class='col-sm-3'>
+                    <label class='select-label plan-select'>
+                        <select>
+                            <option value=''>Percent to Percent</option>
+                            <option value=''>Option 2</option>
+                        </select>
+                    </label>
+                    <div class='inputWrapper'>
+                        <span> Transfer Type</span>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <input type="submit" value="SELECT" class="button submit" />
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                &nbsp;
+            </div>
+        </div>
+        <form name='transQueue'>
+            <div class="row">
+                <table id='categoryHistory' class='table table-condensed table-responsive'>
+                    <caption class="text-left">
+                        <div class="small">All projected numbers are estimated using trade prices from the previous trading day.<span class="pull-right">Icon Key: Early Cutoff</span></div>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class='col-sm-2'>Investment</th>
+                            <th class='col-sm-1'>Current Balance</th>
+                            <th class='col-sm-1'>Units</th>
+                            <th class='col-sm-1'>Value</th>
+                            <th class='col-sm-1'>Current Allocation %</th>
+                            <th class='col-sm-1'>Account Allocation %</th>
+                            <th class='col-sm-1'>Transfer From</th>
+                            <th class='col-sm-1'>Transfer To</th>
+                            <th class='col-sm-1'>Est. Proj. Balance</th>
+                            <th class='col-sm-1'>Est. Proj. Units</th>
+                            <th class='col-sm-1'>Est. Proj. Balance %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">American Funds Growth</td>
+                            <td>$66992.21</td>
+                            <td>1,473.650000</td>
+                            <td>$45.56</td>
+                            <td>25.00%</td>
+                            <td>9.02%</td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td>-15.98%</td>
+                            <td>-15.98%</td>
+                            <td>25.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Artisan Small Cap Value</td>
+                            <td>$121,111.98</td>
+                            <td>4,285.633000</td>
+                            <td>$28.26</td>
+                            <td>25.00%</td>
+                            <td>16.32%</td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td>-15.98%</td>
+                            <td>-8.68%</td>
+                            <td>25.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vangard 500 Index Inc</td>
+                            <td>$167,964.45</td>
+                            <td>929.161000</td>
+                            <td>$180.77</td>
+                            <td>50.00%</td>
+                            <td>22.63%</td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td>-15.98%</td>
+                            <td>-27.37%</td>
+                            <td>25.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vanguard Primecap</td>
+                            <td>$270,603.47</td>
+                            <td>4,665.577000</td>
+                            <td>$58.00</td>
+                            <td>0.00%</td>
+                            <td>36.45%</td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td>-15.98%</td>
+                            <td>36.45%</td>
+                            <td>20.00%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Vanguard Total Bond</td>
+                            <td>$115,654.27</td>
+                            <td>10,447.540000</td>
+                            <td>$11.07</td>
+                            <td>0.00%</td>
+                            <td>15.58%</td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td><input type="text" size="5" value="0.00%" disabled /></td>
+                            <td>-15.98%</td>
+                            <td>15.58%</td>
+                            <td>5.00%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="text-center"><strong>Total</strong></td>
+                            <td class="text-center"><strong>$742,326.29</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center"><strong>0%</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class='col-sm-5'>
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-sm-2 col-sm-offset-7'>
+                    <input type="reset" size="140" value="CLEAR" />
+                </div>
+                <div class='col-sm-3'>
+                    <input type="submit" size="220" class="button" value="ADD TO TRANSFER QUEUE" />
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-sm-5'>
+                    &nbsp;
+                </div>
+            </div>
+        </form>
+    </div> <!-- End Page -->
+</body>
+</html>

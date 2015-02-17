@@ -1,0 +1,10 @@
+<div>
+
+  <h1 class='mainHeader'>Your Dashboard</h1>
+
+  <div class='content'>
+    <div id='dash-container' packery handle='.card-header' row-height='.packery-sizer' column-width='.packery-sizer' item-selector='.sg-card' gutter='20'>
+      <div class='sg-card' id='card_{{ card.id }}' ng-repeat='card in cards' card-name='{{card.name}}' ng-class='{wide: card.size == "medium", full: card.size == "large"}' sg-card packery-object></div>
+    </div>
+  </div>
+</div>

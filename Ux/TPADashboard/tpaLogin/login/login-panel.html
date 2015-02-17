@@ -1,0 +1,54 @@
+<!-- Form control top row -->
+  <div class='card-header row'>
+<!--     <div class="new-user pull-left">
+      <a href='/testApp/#/login/newuser'>New User</a>
+    </div>
+    <div class="pull-right language-selection" ng-show='hasLanguageSelection'> -->
+      <!-- Visual toggle here -->
+      <!-- <span>
+        <a href='' ng-class='{selected: selectedLanguage == "english"}'>English</a>
+          &nbsp; / &nbsp;
+        <a href='' ng-class='{selected: selectedLanguage == "spanish"}'>Spanish</a>
+      </span>
+    </div> -->
+  </div>
+
+  <div class="card-body row">
+    <h2 class='text-center' ng-show='greeting'>{{ greeting }}</h2>
+    <div class='col-sm-8 col-sm-offset-2'>
+      <form name='loginForm' role='form' class='form form-login' novalidate ng-submit='loginForm.$valid && submit()'>
+        <!-- Username -->
+        <div class='form-group username'>
+          <input class='form-control input-lg' type='text' name='username' ng-model='user.name' autofocus required/>
+          <label for='usernameInput'>{{ usernameLabel }}<span ng-show='loginForm.username.$error.required'> *</span></label>
+        </div>
+
+        <!-- Password -->
+        <div class='form-group password'>
+          <input class='form-control input-lg' type='password' name='password' ng-model='user.password' required/>
+          <label for='passwordInput'>{{ passwordLabel }}<span ng-show='loginForm.password.$error.required'> *</span></label>
+          <!-- Forgot Password -->
+          <!-- <label class='pull-right' ng-show='forgotPassword'>
+            <a href='/testApp/#/login/forgot' class="forgot-password yellow">{{ forgotPassword }}</a>
+          </label> -->
+        </div>
+
+        <!-- Remember Username -->
+<!--         <div class='form-group remember'>
+          <label>
+            <input type='checkbox' name='rememberMe'/> &nbsp; Remember me on this computer
+          </label>
+        </div> -->
+
+        <!-- Login Button -->
+        <div class='form-group submit'>
+          <button type='submit' value='Login' class='btn btn-primary btn-lg btn-block' ng-class='{disabled: !loginForm.$valid}'>Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="card-footer row">
+    <p class="text-center">By entering this site you are agreeing to the <br><a href="{{ loginInfoLink }}">Terms and Conditions</a> stated herein. This text is <br>managed via "Custom Text."</p>
+  </div>
+</div>

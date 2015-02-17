@@ -1,0 +1,31 @@
+<div ng-controller='Terminated_EmployeesCtrl'>
+  <header class='card-header'>
+    <div class='title'>{{ terminatedEmployees.title }}</div>
+  </header>
+  <hr />
+  <div class='card-content'>
+    <div class='table-wrapper'>
+      <table id='terminated_employees_table'>
+        <thead>
+          <tr>
+            <th ng-repeat='header in terminatedEmployees.headers'>{{ header.name }}</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class='tableScrollWrapper'>
+      <table>
+      <thead></thead>
+        <tbody>
+          <tr ng-repeat='row in terminatedEmployees.rows | orderBy : terminatedEmployees.sortBy : false'>
+            <td class='text-left' tooltip="{{ row.PLANID }}" tooltip-append-to-body='true'>{{ row.PLANID }} </td>
+            <td class='text-right' tooltip="{{ row.PLANNAM }}" tooltip-append-to-body='true'>{{ row.PLANNAM }}</td>
+            <td class='text-right'>{{ row.TERMPARTOVER5KNUM }}</td>
+            <td class='text-right'>{{ row.TERMPARTUNDER5KNUM }}</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

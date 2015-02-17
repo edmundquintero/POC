@@ -1,0 +1,36 @@
+<div class='container' id='tpa-config'>
+
+  <h1>Settings</h1>
+
+  <div class='content-panel'>
+    <p class='description'>
+      This is where you can configure your widget settings.
+    </p>
+
+    <div class='row'>
+        <div class='search-control'>
+          <label class='glyphicons search' for='search'></label>
+          <input type="search" id="search" class="form-control" ng-model="search" placeholder='Put me somewhere amazing Matt!'>
+        </div>
+    </div>
+    <div class='row'>
+      <ul class='config-list'>
+        <li>
+          <span class='list-header first-column'>Widget Name/Data</span>
+          <span class='list-header'>Turn Widget On/Off</span>
+        </li>
+        <li ng-repeat='card in cards | filter:search' class='list-item' id='card_{{ card.id }}'>
+          <hr />
+          <div class='config-title first-column'>{{ card.title }}</div>
+          <div class='slider-toggle' ng-class='{active: card.visible}'>
+            <span class='slider-toggle-firstlabel'>On</span>
+            <div class='slider-toggle-control'></div>
+            <span class='slider-toggle-secondlabel'>Off</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>

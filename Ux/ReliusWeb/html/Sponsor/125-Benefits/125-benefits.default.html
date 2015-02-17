@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+        <div class='row'>
+            <form id='benefitsForm' name=''>
+                <div class='row'>
+                    <div class='col-sm-2'>
+                        <h2>Benefits</h2>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label class='select-label'>
+                            <select class=''>
+                                <option value='lastname'>Last Name</option>
+                                <option value='firstname'>First Name</option>
+                            </select>
+                        </label>
+                        <div class='inputWrapper'>
+                            <span class=''>Sort Results By</span>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label class='select-label'>
+                            <select class=''>
+                                <option value='choicehealth'>Choice Health</option>
+                                <option value='somethingelse'>Something Else</option>
+                            </select>
+                        </label>
+                        <div class='inputWrapper'>
+                            <span class=''>Select Benefit</span>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='form-controls'>
+                            <div class='row'>
+                                <a class='button submit' href=''>GET RESULTS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!--<hr />
+            <nav id='local' class='tabbed'>
+              <ul>
+                <li class='active'>Benefits</li>
+                <li>Payments</li>
+                <li>Claims</li>
+              </ul>
+            </nav>-->
+        </div>
+        <div class='row'>
+            <div class="col-sm-4">
+                <form id='benefitSelectForm' name='benefitSelect'>
+                    <label class='select-label'>
+                        <select class=''>
+                            <option value='choicehealth'>Choice Health</option>
+                            <option value='somethingelse'>Something Else</option>
+                        </select>
+                    </label>
+                    <div class='inputWrapper'>
+                        <span class=''>Select Benefit</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='row'>
+            <h4>Benefit Details</h4>
+            <hr />
+        </div>
+        <div class='row'>
+            <div class='col-sm-12 col-sm-offset-0'>
+                <ul class='striped'>
+                    <li>Benefit eligibility:<span class='pull-right'>On the day of hire</span></li>
+                    <li>Benifit enrollment period: <span class='pull-right'>The day the employee is eligible</span></li>
+                    <li>Number of eligible employees: <span class='pull-right'>6</span></li>
+                    <li>Number of participating employees: <span class='pull-right'>6</span></li>
+                    <li>Current year grace period end date: <span class='pull-right'>03/15/2015</span></li>
+                    <li>Prior year grace period end date: <span class='pull-right'>03/14/2014</span></li>
+                    <li>Claim run out days for prior year claims: <span class='pull-right'>90</span></li>
+                    <li>Claim run out days for terminated employees: <span class='pull-right'>0</span></li>
+                    <li>Minimum payment amount: <span class='pull-right'>$0.00</span></li>
+                    <li>Maximum employee annul deduction: <span class='pull-right'>$5,000.00</span></li>
+                </ul>
+            </div>
+        </div> <!-- end row -->
+
+    </div><!-- end #page -->
+</body>
+</html>

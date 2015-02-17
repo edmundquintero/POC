@@ -1,0 +1,24 @@
+<div ng-controller='Eligible_EmployeesCtrl'>
+  <header class='card-header'>
+    <div class='title'>{{ eligibleEmployees.title }}</div>
+  </header>
+  <hr />
+  <div class='card-content'>
+    <div class='table-wrapper'>
+      <table id='eligible_employees_table'>
+        <thead>
+          <tr>
+            <th ng-repeat='header in eligibleEmployees.headers'>{{ header.name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat='row in eligibleEmployees.rows | orderBy : eligibleEmployees.sortBy : false'>
+            <td class='text-left' tooltip="{{ row.PLANID }}" tooltip-append-to-body='true'>{{ row.PLANID }} </td>
+            <td class='text-right'>{{ row.ELIGNOTPARTICCOUNTNUM }}</td>
+            <td class='text-right'>{{ row.PARTICIPATIONPCT| percentage }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

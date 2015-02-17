@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js">  -->
+<!--<![endif]-->
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/css/normalize.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/datepicker.css">
+    <link rel="stylesheet" href="../../resources/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet/less" href="resources/css/glyphicons.less"> -->
+    <!-- <link rel="stylesheet/less" href="resources/css/main.less"> -->
+    <link rel="stylesheet" href="../../resources/css/glyphicons.min.css">
+    <link rel="stylesheet" href="../../resources/css/main.min.css">
+
+    <script src="../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../../resources/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="../../resources/js/custom.js"></script>
+    <style>
+        .table-rownocolor tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .table-rownocolor tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .table-outerborder > tbody > tr > td {
+            border:0px;
+        }
+
+            .table-outerborder > tbody > tr > td:first-child {
+                border-left: 1px solid #cccccc;
+            }
+
+            .table-outerborder > tbody > tr > td:last-child {
+                border-right: 1px solid #cccccc;
+            }
+
+        .table-child {
+            margin: 0px;
+        }                
+        
+            
+
+        .table-child tbody tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+           .table-child tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .table-child tbody tr td {                
+            
+            padding: 5px;            
+             border-left: 1px solid #cccccc;
+                border-right: 1px solid #cccccc;
+
+        }
+        .table-child > tbody > tr > td:first-child {
+            border-left:0px;
+            border-right:0px;
+             
+        }
+
+        .table-child > tbody > tr > td:last-child {
+            border-left:0px;
+            border-right:0px;
+             
+        }
+        .table-child > tbody > tr:first-child {
+             
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .table-child > tbody > tr:last-child {
+             
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Warning for IE versions less than 7 -->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='page' class='container'>
+    
+        <div class="row"><hr /></div>  
+                  
+        <div class="row">
+            <a href="">< Return to Model Selection</a>
+        </div>        
+
+        <div class="row"></div>
+
+        <div class="row">
+            <form id='transferType' name='transferType'>
+                <div class="row">
+                    <div class='col-md-3'>
+                        <label class='select-label'>
+                            <select>
+                                <option value=''>Percent to Percent</option>
+                                <option value=''>Percent to Amount</option>
+                                <option value=''>Amount to Amount</option>
+                            </select>
+                        </label>
+                        <div class='inputWrapper'>
+                            <span class=''>Transfer Type</span>
+                        </div>
+                    </div>
+                    <div class='form-controls'>
+                        <a href="javascript:void(0)" class="button submit">SELECT</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-10">
+                    <small>All projected numbers are estimated using trade prices from the previous trading day.</small>
+                </div>
+                <div class="text-right col-sm-2">
+                    <small>Icon Key:</small>
+                    <span class="glyphicons alarm icon"></span>
+                    <small>Early Cutoff</small>                        
+                </div>                    
+            </div>
+        </div>
+
+            <div class='row'>
+                <form name="transfers" id="transfers">
+                    <table id='investmentModel' class='table table-condensed table-responsive'>
+                        <thead>
+                            <tr>
+                                <th>Investment</th>
+                                <th>Current Balance</th>
+                                <th>Units</th>
+                                <th>Value</th>
+                                <th>Current Allocation %</th>
+                                <th>Account Allocation %</th>
+                                <th>Transfer From</th>
+                                <th>Transfer To</th>
+                                <th>Est. Proj. Balance</th>
+                                <th>Est. Proj. Units</th>
+                                <th>Est. Proj. Balance%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">American Funds Growth Value</td>
+                                <td>$66,992.12</td>
+                                <td>1,432.6500000</td>
+                                <td>$45.46</td>
+                                <td>25.00%</td>
+                                <td>9.02%</td>
+                                <td style="vertical-align:top">
+                                    <div class='inputWrapper full' style="vertical-align:top">
+                                        <input type="text" name="inv_from_1" value="0.00%" />
+                                    </div>
+                                </td>
+                                <td><input type="text" name="inv_to_1" value="0.00%" /></td>
+                                <td>$66,999.00</td>
+                                <td>1,432.6500000</td>
+                                <td>28.00%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">American Funds Growth Value</td>
+                                <td>$66,992.12</td>
+                                <td>1,432.6500000</td>
+                                <td>$45.46</td>
+                                <td>25.00%</td>
+                                <td>9.02%</td>
+                                <td><input type="text" name="inv_from_1" value="0.00%" /></td>
+                                <td><input type="text" name="inv_to_1" value="0.00%" /></td>
+                                <td>$66,999.00</td>
+                                <td>1,432.6500000</td>
+                                <td>28.00%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">American Funds Growth Value&nbsp;&nbsp;<span class="glyphicons alarm icon"></span></td>
+                                <td>$66,992.12</td>
+                                <td>1,432.6500000</td>
+                                <td>$45.46</td>
+                                <td>25.00%</td>
+                                <td>9.02%</td>
+                                <td><input type="text" name="inv_from_1" value="0.00%" /></td>
+                                <td><input type="text" name="inv_to_1" value="0.00%" /></td>
+                                <td>$66,999.00</td>
+                                <td>1,432.6500000</td>
+                                <td>28.00%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">American Funds Growth Value</td>
+                                <td>$66,992.12</td>
+                                <td>1,432.6500000</td>
+                                <td>$45.46</td>
+                                <td>25.00%</td>
+                                <td>9.02%</td>
+                                <td><input type="text" name="inv_from_1" value="0.00%" /></td>
+                                <td><input type="text" name="inv_to_1" value="0.00%" /></td>
+                                <td>$66,999.00</td>
+                                <td>1,432.6500000</td>
+                                <td>28.00%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">American Funds Growth Value</td>
+                                <td>$66,992.12</td>
+                                <td>1,432.6500000</td>
+                                <td>$45.46</td>
+                                <td>25.00%</td>
+                                <td>9.02%</td>
+                                <td><input type="text" name="inv_from_1" value="0.00%" /></td>
+                                <td><input type="text" name="inv_to_1" value="0.00%" /></td>
+                                <td>$66,999.00</td>
+                                <td>1,432.6500000</td>
+                                <td>28.00%</td>
+                            </tr>
+                            <tr class="row-total">
+                                <td class="text-left">Total</td>
+                                <td>$742,992.12</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00%</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12 text-right">
+                        <a href="jascript:void(0)" class='button'>CLEAR</a> &nbsp;&nbsp;&nbsp;<a href="jascript:void(0)" class='button submit'>ADD TO TRANSFER QUEUE</a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row"><hr /></div>  
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <table id='investmentTransferQueue' class='table table-condensed table-outerborder table-responsive table-rownocolor'>
+                <thead>
+                    <tr>
+                        <th class="col-sm-2">Transfer</th>
+                        <th class="col-sm-5">Investment</th>
+                        <th class="col-sm-2 text-center">Sell Amt.</th>
+                        <th class="text-center">Purchase %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">Request 1</td>
+                        <td></td>
+                        <td class="text-center">12.00%</td>
+                        <td class="text-right"><a href="javascript:void(0);">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="padding:0px">
+                            <table id="" class='table table-child table-condensed table-responsive'>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td class="col-sm-5 text-left">American Funds Growth Fund of America</td>
+                                    <td class="col-sm-2"></td>
+                                    <td class="text-center">100%</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td class="col-sm-5 text-left">Artisan Small Cap Value</td>
+                                    <td class="col-sm-2"></td>
+                                    <td class="text-center">0%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Request 2</td>
+                        <td></td>
+                        <td class="text-center">13.00%</td>
+                        <td class="text-right"><a href="javascript:void(0);">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="padding:0px">
+                            <table id="" class='table table-child table-condensed table-responsive'>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td class="col-sm-5 text-left">Vanguard 500 Index Investor</td>
+                                    <td class="col-sm-2"></td>
+                                    <td class="text-center">50%</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td class="col-sm-5 text-left">Vanguard Primecap</td>
+                                    <td class="col-sm-2"></td>
+                                    <td class="text-center">20%</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td class="col-sm-5 text-left">Vanguard Primecap 123</td>
+                                    <td class="col-sm-2"></td>
+                                    <td class="text-center">30%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-12 text-right">
+                    <a href="javascript:void(0)" class='button submit'>VERIFY AND SUBMIT TRANSFERS</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+     </div> <!-- end row -->
+</body>
+
+</html>

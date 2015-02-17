@@ -1,0 +1,31 @@
+<div ng-controller='My_Top_TenCtrl'>
+  <header class='card-header'>
+    <div class='title'>{{ topTen.title }}</div>
+  </header>
+  <hr />
+  <div class='card-content'>
+    <div class='slider-toggle' ng-class='{active: topTen.type == "participantCount"}' ng-click='changeType()'>
+      <div class='slider-toggle-control'></div>
+      <span class='slider-toggle-firstlabel'>Participant Count</span> /
+      <span class='slider-toggle-secondlabel'>Total Assets</span>
+    </div>
+    <div class='table-wrapper'>
+      <table id='my_top_ten_table'>
+        <thead>
+          <tr>
+            <th ng-repeat='header in topTen.headers'>{{ header.name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat='row in topTen.rows | orderBy : topTen.sortBy : true'>
+            <td class='text-left' tooltip="{{ row.PLANID }}" tooltip-append-to-body='true'>{{ row.PLANID }} </td>
+            <td class='text-right' tooltip="{{ row.PLANNAM }}" tooltip-append-to-body='true'>{{ row.PLANNAM }}</td>
+            <td class='text-right' ng-show='topTen.sortBy == "ELIGIBLEEMPLOYEES"'>{{ row.ELIGIBLEEMPLOYEES }}</td>
+            <td class='text-right' ng-show='topTen.sortBy == "TOTALMARKETVALUE"'>{{ row.TOTALMARKETVALUE | currency }}</td>
+            <td class='text-right'>{{ row.YTDFEEAMT | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

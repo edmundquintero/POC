@@ -1,0 +1,14 @@
+  <nav id='footernav' class='pull-right'>
+    <div dropdown class='dropup' is-open='status.isopen'>
+      <a class="dropdown-toggle" type="button" id="helpMenu" ng-disabled='disabled'>
+        <span class="caret"></span>
+        Help
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right" role="helpmenu" aria-labelledby="helpMenu">
+        <li role="presentation" ng-repeat='link in defaultLinks' title='{{ link.title }}'><a role="helpmenuitem" tabindex="-1" href="{{ link.href }}">{{ link.name }}</a></li>
+        <li role="presentation" ng-repeat='link in customLinks' title='{{ link.title }}'><a role="helpmenuitem" tabindex="-1" href="{{ link.href }}">{{ link.name }}</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id='copywright' ng-show='copywright'>&copy; {{ copywright }}</div>
