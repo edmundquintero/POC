@@ -797,6 +797,9 @@ footer{
 .mobile{
   display: none;
 }
+br.break-large{
+  display: none;
+}
 .description{
   margin: 0 0 0 @padding-med;
 }
@@ -838,6 +841,7 @@ footer{
     }
     .nav-item{
       text-align: center;
+      padding: 5px 0;
       div{
         display: inline-block;
         font-family: 'Roboto-bold', helvetica, sans-serif;
@@ -853,7 +857,7 @@ footer{
       }
     }
     div{
-      padding: 10px 0 0 5px; 
+      padding: 12px 0 0 5px; 
     }
   }
 }
@@ -981,7 +985,12 @@ form[name=investmentType]{
   .desktop{
     display: none;
   }
-
+  .mobile{
+    display: inherit;
+  }
+  br.break-large{
+    display: block;
+  }
   nav.mainNav{
     >ul{
       background: #333;
@@ -1045,7 +1054,6 @@ form[name=investmentType]{
       }
     }
   }
-
   // header.mainHeader{
   //   nav.options-bar ul li:first-child{
   //     display: block;

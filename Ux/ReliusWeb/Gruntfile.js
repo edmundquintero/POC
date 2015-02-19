@@ -20,15 +20,15 @@ module.exports = function( grunt ) {
       js:{
         options: {
           // Replace all 'use strict' statements in the code with a single one at the top
-          banner: '\'use strict\';\n\n(function () {\n\n',
+          banner: '\'use strict\';\njQuery.noConflict();\n\n(function ($) {\n\n',
           process: function(src, filepath) {
             return '  // Source: ' + filepath + '\n' +
               src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1  ');
           },
-          footer: '\n})();'
+          footer: '\n})(jQuery);'
         },
         files: {
-          'html/resources/js/reliusadmin.js' : [ 'html/resources/js/*.js' ]
+          'html/resources/js/dist/reliusadmin.js' : [ 'html/resources/js/**/*.js', '!html/resources/js/vendor/*', '!html/resources/js/dist/*' ]
         }
       }
     },
@@ -36,7 +36,7 @@ module.exports = function( grunt ) {
     uglify: {
       min: {
         files: {
-          'html/resources/js/reliusadmin.min.js': [ 'html/resources/js/reliusadmin.js' ]
+          'html/resources/js/dist/reliusadmin.min.js': [ 'html/resources/js/dist/reliusadmin.js' ]
         }
       }
     },

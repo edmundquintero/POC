@@ -1,9 +1,5 @@
 'use strict';
 
-jQuery.noConflict();
-
-(function($){
-
   $(document).ready(function(){
 
     // Temporary function to swap out login images
@@ -73,5 +69,3 @@ jQuery.noConflict();
     });
 
   });
-
-})(jQuery);

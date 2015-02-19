@@ -1,27 +1,18 @@
-/*!
- * Relius-Admin
- * Version: 1.0.0
- * License: MIT
- */
-
 'use strict';
+jQuery.noConflict();
 
-(function () {
+(function ($) {
 
   // Source: html/resources/js/config.js
   /* exported Config */
-function Config (){
-  /* JSHint validthis: true */  
-  var self = this;  
-  self.URLROOT = 'the server';
-  self.THEME =  'blue';
+  function Config (){
+    /* JSHint validthis: true */  
+    var self = this;  
+    self.URLROOT = 'the server';
+    self.THEME =  'blue';
 
-}
+  }
   // Source: html/resources/js/custom.js
-  jQuery.noConflict();
-
-(function($){
-
   $(document).ready(function(){
 
     // Temporary function to swap out login images
@@ -92,18 +83,13 @@ function Config (){
 
   });
 
-})(jQuery);
-
   // Source: html/resources/js/manageInvestments.js
   var fakeAPI = {
   'TotBalAmt': 200010.03,
   'performance': 0.20
 };
 
-var config = new config();
-jQuery.noConflict();
-
-(function($){
+// var config = new Config();
 
   $(document).ready(function(){
 
@@ -132,31 +118,36 @@ jQuery.noConflict();
 
       for( var a = 0; a < stickynavlength; a++){
         triggerHeight = ( $('.mainNav').offset().top + $('.mainNav').height() );
+        /* global StickyNav: false */
         new StickyNav(stickynavs[a], { triggerHeight: triggerHeight });
       }
 
     })();
 
+  });
 
-    function StickyNav(nav, options) {
-      options = (typeof options === 'object') ? options : {};
-      /* JSHint validthis: true */
-      var self = this;
-      self.element = (typeof nav === 'object') ? nav : {};
-      self.top = options.top || 0;
-      self.left = options.left || 0;
-      self.triggerHeight = options.triggerHeight || 0;
+  // Source: html/resources/js/stickynav/stickynav.js
+  /* exported StickyNav */
+  function StickyNav(nav, options) {
+    options = (typeof options === 'object') ? options : {};
+    /* JSHint validthis: true */
+    var self = this;
+    self.element = (typeof nav === 'object') ? nav : {};
+    self.top = options.top || 0;
+    self.left = options.left || 0;
+    self.triggerHeight = options.triggerHeight || 0;
+    self.setPosition = setPosition;
+    self.dependencies = dependencies;
+    self.init = init;
 
-      if( dependencies() ){ init(); }
+    if( self.dependencies() ){ self.init(); }
 
-      return;
+    return;
 
-      function init(){
+    function init(){
 
-        setPosition();
-
+      self.setPosition(function () {
         $(window).scroll(function () {
-          console.log('scrolling');
           if( $(window).scrollTop() > self.triggerHeight ){
             if( !$(self.element).is(':visible') ){      
               $(self.element).slideDown(200);
@@ -167,28 +158,26 @@ jQuery.noConflict();
             }
           }
         });
-      }
-
-      function setPosition(){
-        $(self.element).css( { 'top': String(self.top), 'left': String(self.left) } );
-      }
-
-      function dependencies(){
-        if( typeof nav !== 'object' ){
-          console.log('Sticky Nav requires a DOM element as a first argument!  Found: ', nav);
-          return false;
-        }
-        if(typeof $ !== 'function'){
-          console.log('Sticky Nav requires jQuery!');
-          return false;
-        }
-        return true;
-      }
+      });
 
     }
 
+    function setPosition(callback){
+      callback = (typeof callback === 'function') ? callback : function(){};
+      $(self.element).css( { 'top': String(self.top), 'left': String(self.left) } );
+      callback();
+    }
 
-  });
-
+    function dependencies(){
+      if( typeof nav !== 'object' ){
+        console.log('Sticky Nav requires a DOM element as a first argument!  Found: ', nav);
+        return false;
+      }
+      if(typeof $ !== 'function'){
+        console.log('Sticky Nav requires jQuery!');
+        return false;
+      }
+      return true;
+    }
+  }
 })(jQuery);
-})();
